@@ -4,188 +4,288 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nguyen Hoang Phong — Business Analyst, Data Science & FinTech Portfolio</title>
-  <meta name="description" content="Portfolio of Nguyen Hoang Phong — Final-year Financial Technology & Digital Business student at VNU International School (GPA 3.45/4.0). Business Analysis, Data Science, AI & Market Research projects." />
+  <meta name="description" content="Portfolio of Nguyen Hoang Phong — Final-year Financial Technology & Digital Business student at VNU International School (GPA 3.45/4.0). Business Analysis, Data Science, Explainable AI & Market Research." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Scroll progress indicator -->
+  <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Ambient animated background -->
-  <div class="ambient-bg" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
-  <!-- Navigation -->
+  <!-- Minimalist Sticky Top Navbar -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#top" class="brand">
+      <a href="#home" class="brand" aria-label="Nguyen Hoang Phong Home">
         <span class="brand-mark">NP</span>
-        <span class="brand-text">Nguyen Hoang Phong</span>
+        <span class="brand-name">Nguyen Hoang Phong</span>
       </a>
+
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#about" class="nav-link">About Me</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#research" class="nav-link">Research</a>
-        <a href="#credentials" class="nav-link">Credentials</a>
-        <a href="#resumes" class="nav-link">CVs &amp; PDF</a>
-        <a href="#contact" class="nav-link nav-cta">Contact</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#resumes" class="nav-link">Resumes</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+
+      <div class="nav-right">
+        <a href="#contact" class="pill-btn pill-btn-blue nav-contact-btn">
+          Contact Me
+          <span class="arrow-circle" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+
     <div class="mobile-nav" id="mobileNav">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#capabilities" class="mobile-nav-link">Capabilities</a>
+      <a href="#about" class="mobile-nav-link">About Me</a>
       <a href="#projects" class="mobile-nav-link">Projects</a>
-      <a href="#research" class="mobile-nav-link">Research</a>
-      <a href="#credentials" class="mobile-nav-link">Credentials</a>
-      <a href="#resumes" class="mobile-nav-link">CVs &amp; PDF</a>
-      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <a href="#journey" class="mobile-nav-link">Journey</a>
+      <a href="#resumes" class="mobile-nav-link">Resumes &amp; PDF</a>
+      <a href="#contact" class="mobile-nav-link">Contact Me</a>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero Section -->
-    <section class="hero">
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="status-pill reveal-hero" style="--d: 0ms">
-            <span class="status-dot"></span>
-            Open to Internships in Hanoi &middot; Business Analysis &middot; Data &amp; AI &middot; Market Research
+        <div class="hero-copy">
+          <!-- Iconic Figma-style Selection Bounding Box Tag -->
+          <div class="hello-box reveal-hero" style="--d: 0ms">
+            <span class="handle tl"></span>
+            <span class="handle tr"></span>
+            <span class="handle bl"></span>
+            <span class="handle br"></span>
+            <span class="hello-dot"></span>
+            Hello ! Open to Internships in Hanoi
           </div>
 
-          <h1 class="hero-title reveal-hero" style="--d: 90ms">
-            Turning complex data &amp; business flows into
-            <span class="gradient-text">clear, explainable systems.</span>
+          <h1 class="hero-title reveal-hero" style="--d: 85ms">
+            I’m <span class="name-highlight">Nguyen Hoang Phong,</span><br />
+            <span class="role-line">Business, Data &amp; AI Analyst</span>
           </h1>
 
-          <p class="hero-lead reveal-hero" style="--d: 170ms">
-            Hi, I’m <strong>Nguyen Hoang Phong</strong> — a final-year Financial Technology &amp; Digital Business student at <strong>VNU International School</strong> (GPA 3.45/4.0), co-author of an <strong>ICECH 2026</strong> IFRS S1/S2 study, and builder of end-to-end FinTech, Business Analysis, and Explainable AI systems.
+          <p class="hero-subtitle reveal-hero" style="--d: 170ms">
+            Final-year <strong>Financial Technology &amp; Digital Business</strong> student at <strong>VNU International School</strong> (GPA 3.45/4.0) &amp; <strong>ICECH 2026</strong> published co-author — turning business requirements and raw data into clear, explainable systems.
           </p>
 
-          <div class="hero-actions reveal-hero" style="--d: 250ms">
-            <a href="#projects" class="btn btn-primary">
-              Explore 6 Projects
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <div class="hero-actions reveal-hero" style="--d: 240ms">
+            <a href="#projects" class="pill-btn pill-btn-blue pill-btn-lg">
+              Explore Projects
+              <span class="arrow-circle" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
             </a>
-            <a href="assets/Portfolio%20Nguyen%20Hoang%20Phong.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Portfolio PDF
+            <a href="#resumes" class="pill-btn pill-btn-outline pill-btn-lg">
+              CVs &amp; Portfolio PDF
             </a>
-            <a href="https://github.com/phonghoang5800-droid" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
+            <a href="https://github.com/phonghoang5800-droid" target="_blank" rel="noopener" class="icon-circle-btn" aria-label="GitHub Profile" title="GitHub Profile">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411" target="_blank" rel="noopener" class="icon-circle-btn" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
             </a>
           </div>
 
-          <!-- Highlight Metrics -->
-          <div class="hero-metrics reveal-hero" style="--d: 330ms">
-            <div class="metric-card">
-              <div class="metric-value" data-count="3.45" data-decimals="2" data-suffix="/4.0">3.45/4.0</div>
-              <div class="metric-label">GPA &middot; VNU-IS FinTech</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-value" data-count="463" data-decimals="0" data-suffix="/463">463/463</div>
-              <div class="metric-label">Test Cases Passed (Hanoi Homes)</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-value" data-count="3" data-decimals="0" data-suffix="x">3x</div>
-              <div class="metric-label">Google Professional Certs</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-value">ICECH ’26</div>
-              <div class="metric-label">Published Co-Author</div>
-            </div>
+          <div class="hero-trust-row reveal-hero" style="--d: 310ms">
+            <span><strong>3.45/4.0</strong> GPA</span>
+            <span class="sep">&bull;</span>
+            <span><strong>463/463</strong> QA Tests Passed</span>
+            <span class="sep">&bull;</span>
+            <span><strong>3x</strong> Google Certs</span>
+            <span class="sep">&bull;</span>
+            <span>English <strong>Aptis B2</strong></span>
           </div>
         </div>
 
-        <!-- Portrait Card -->
-        <div class="hero-visual reveal-hero" style="--d: 200ms">
-          <div class="portrait-card" id="portraitCard">
-            <div class="portrait-frame">
-              <img src="assets/images/portrait.jpg" alt="Portrait of Nguyen Hoang Phong" loading="eager" />
+        <!-- Portrait Composition with Cobalt Organic Backdrop & Cursor Pill Tags -->
+        <div class="hero-visual reveal-hero" style="--d: 180ms">
+          <div class="portrait-stage" id="portraitStage">
+            <svg class="stage-orbit" viewBox="0 0 420 420" fill="none" aria-hidden="true">
+              <circle cx="210" cy="210" r="188" stroke="#2563EB" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="6 8"/>
+              <circle cx="210" cy="210" r="154" stroke="#2563EB" stroke-opacity="0.12" stroke-width="1"/>
+            </svg>
+            <div class="cobalt-blob" aria-hidden="true"></div>
+            <div class="portrait-shell">
+              <img src="assets/images/portrait.jpg" alt="Nguyen Hoang Phong" loading="eager" />
             </div>
-            <div class="portrait-meta">
-              <div>
-                <div class="portrait-name">Nguyen Hoang Phong</div>
-                <div class="portrait-role">FinTech &amp; Digital Business &middot; Hanoi</div>
-              </div>
-              <span class="verified-chip">Aptis B2</span>
+
+            <!-- Floating Cursor Pill Badges (Signature Motif) -->
+            <div class="cursor-pill cp-1">
+              <svg class="cursor-arrow" width="16" height="16" viewBox="0 0 24 24" fill="#2563EB"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
+              <span>Business Analyst</span>
             </div>
-            <!-- Floating subtle capability pills -->
-            <div class="float-badge float-badge-1">
-              <span class="fb-icon">BA</span>
-              <div>
-                <strong>URD &amp; API Specs</strong>
-                <span>Use Cases &middot; Workflows</span>
-              </div>
+
+            <div class="cursor-pill cp-2">
+              <svg class="cursor-arrow cursor-arrow-dark" width="16" height="16" viewBox="0 0 24 24" fill="#0A0F1E"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
+              <span>Data Science &amp; AI</span>
             </div>
-            <div class="float-badge float-badge-2">
-              <span class="fb-icon fb-green">AI</span>
-              <div>
-                <strong>Explainable ML</strong>
-                <span>SHAP &middot; CatBoost &middot; XAI</span>
-              </div>
+
+            <div class="cursor-pill cp-3">
+              <svg class="cursor-arrow" width="16" height="16" viewBox="0 0 24 24" fill="#2563EB"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
+              <span>Market Research</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Core Competencies Strip -->
-    <section class="pillars-section">
+    <!-- ==================== ANGLED COBALT MARQUEE STRIP ==================== -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-ribbon">
+        <div class="marquee-track">
+          <span>Business Analysis</span><i class="star">&#10022;</i>
+          <span>Data Science &amp; ML</span><i class="star">&#10022;</i>
+          <span>Explainable AI (SHAP / XAI)</span><i class="star">&#10022;</i>
+          <span>FinTech Systems</span><i class="star">&#10022;</i>
+          <span>Market Research</span><i class="star">&#10022;</i>
+          <span>IFRS S1/S2 ESG</span><i class="star">&#10022;</i>
+          <span>API Specs &amp; QA Testing</span><i class="star">&#10022;</i>
+          <!-- Seamless loop duplicate -->
+          <span>Business Analysis</span><i class="star">&#10022;</i>
+          <span>Data Science &amp; ML</span><i class="star">&#10022;</i>
+          <span>Explainable AI (SHAP / XAI)</span><i class="star">&#10022;</i>
+          <span>FinTech Systems</span><i class="star">&#10022;</i>
+          <span>Market Research</span><i class="star">&#10022;</i>
+          <span>IFRS S1/S2 ESG</span><i class="star">&#10022;</i>
+          <span>API Specs &amp; QA Testing</span><i class="star">&#10022;</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CAPABILITIES / SERVICES ==================== -->
+    <section class="section" id="capabilities">
       <div class="container">
-        <div class="pillars-grid">
-          <article class="pillar-card reveal">
-            <div class="pillar-icon pillar-blue">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+        <div class="sec-head reveal">
+          <div>
+            <div class="sec-kicker"><span class="kicker-dash"></span> Capabilities</div>
+            <h2 class="sec-title">Value I <span class="text-blue">Provide</span></h2>
+          </div>
+          <a href="#projects" class="pill-btn pill-btn-blue">
+            See All Projects
+            <span class="arrow-circle" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card spotlight-card reveal">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
             </div>
             <h3>Business &amp; System Analysis</h3>
-            <p>Translating real workflows into clear URD, use cases, user stories, API data field specifications, and structured functional test suites.</p>
-            <div class="mini-tags">
-              <span>URD &amp; Use Cases</span><span>API Data Fields</span><span>Functional Testing</span>
+            <p>Translating real business flows into crisp URD documentation, use cases, user stories, API data field specifications, and structured functional test suites.</p>
+            <div class="chip-row">
+              <span>URD &amp; Use Cases</span><span>API Data Fields</span><span>Functional QA</span>
             </div>
           </article>
 
-          <article class="pillar-card reveal" style="--delay: 80ms">
-            <div class="pillar-icon pillar-indigo">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          <article class="service-card spotlight-card reveal" style="--delay: 80ms">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
             </div>
             <h3>Data Science &amp; Explainable AI</h3>
-            <p>End-to-end pipelines from raw data cleaning and model benchmarking to SHAP / Local XAI explanations connected to tested web applications.</p>
-            <div class="mini-tags">
-              <span>Python &amp; SQLite</span><span>CatBoost &amp; SHAP</span><span>FastAPI &amp; R Shiny</span>
+            <p>End-to-end pipelines from raw data validation and multi-model benchmarking to SHAP / Local XAI explanations integrated with FastAPI, R Shiny, and SQLite.</p>
+            <div class="chip-row">
+              <span>Python &amp; CatBoost</span><span>SHAP &amp; XAI</span><span>SQLite &amp; FastAPI</span>
             </div>
           </article>
 
-          <article class="pillar-card reveal" style="--delay: 160ms">
-            <div class="pillar-icon pillar-emerald">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+          <article class="service-card spotlight-card reveal" style="--delay: 160ms">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
             </div>
             <h3>Market &amp; Corporate Research</h3>
-            <p>Extracting, cross-checking, and mapping ESG, financial, and housing-market datasets into transparent criteria frameworks and clear insights.</p>
-            <div class="mini-tags">
-              <span>IFRS S1/S2</span><span>EDA &amp; Driver Analysis</span><span>BI Reporting</span>
+            <p>Extracting, verifying, and mapping corporate ESG, financial, and real estate datasets into criteria-based audits, driver analyses, and stakeholder-ready BI insights.</p>
+            <div class="chip-row">
+              <span>IFRS S1/S2 Audit</span><span>Multivariate EDA</span><span>BI Reporting</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Flagship Projects Section -->
+    <!-- ==================== FULL-BLEED COBALT ABOUT ME BAND ==================== -->
+    <section class="about-band" id="about">
+      <!-- Topographic contour line-wave SVG background -->
+      <svg class="about-waves" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-80 120 C 260 20, 520 260, 880 130 C 1180 20, 1340 160, 1540 90" stroke="white" stroke-opacity="0.11" stroke-width="1.5" fill="none"/>
+        <path d="M-80 210 C 280 90, 560 330, 920 200 C 1220 90, 1360 240, 1540 170" stroke="white" stroke-opacity="0.09" stroke-width="1.5" fill="none"/>
+        <path d="M-80 310 C 310 190, 590 420, 960 290 C 1240 180, 1380 330, 1540 260" stroke="white" stroke-opacity="0.08" stroke-width="1.5" fill="none"/>
+        <path d="M-80 410 C 330 300, 620 490, 1000 380 C 1270 280, 1400 420, 1540 360" stroke="white" stroke-opacity="0.07" stroke-width="1.5" fill="none"/>
+      </svg>
+
+      <div class="container about-grid">
+        <div class="about-photo-col reveal">
+          <div class="about-ring">
+            <img src="assets/images/portrait.jpg" alt="Nguyen Hoang Phong portrait" loading="lazy" />
+          </div>
+          <div class="about-chip">VNU International School &middot; Expected 2027</div>
+        </div>
+
+        <div class="about-copy reveal" style="--delay: 90ms">
+          <div class="sec-kicker kicker-white"><span class="kicker-dash dash-white"></span> About Me</div>
+          <h2 class="about-title">Who is <span class="underline-white">Nguyen Hoang Phong?</span></h2>
+          <p class="about-desc">
+            I’m a final-year Financial Technology and Digital Business student at <strong>VNU International School – Vietnam National University, Hanoi</strong>. I enjoy working at the intersection of business requirements, structured data, and practical technology — whether defining API data fields and URD flows for a dev team, validating housing datasets for CatBoost + SHAP models, or auditing corporate IFRS S1/S2 sustainability reports.
+          </p>
+
+          <div class="about-stats">
+            <div class="a-stat">
+              <strong data-count="3.45" data-decimals="2" data-suffix="/4.0">3.45/4.0</strong>
+              <span>Cumulative GPA</span>
+            </div>
+            <div class="a-stat">
+              <strong data-count="463" data-decimals="0" data-suffix="/463">463/463</strong>
+              <span>QA Tests Passed</span>
+            </div>
+            <div class="a-stat">
+              <strong data-count="6" data-decimals="0" data-suffix="+">6+</strong>
+              <span>End-to-End Projects</span>
+            </div>
+            <div class="a-stat">
+              <strong>ICECH ’26</strong>
+              <span>Published Co-Author</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#resumes" class="pill-btn pill-btn-white pill-btn-lg">
+              Download CV &amp; Portfolio
+              <span class="arrow-circle arrow-circle-blue" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </a>
+            <button type="button" class="pill-btn pill-btn-ghost-white pill-btn-lg" data-preview-doc="portfolio">
+              Preview 5-Page Portfolio
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS ==================== -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="sec-head sec-head-wrap reveal">
           <div>
-            <span class="eyebrow">Selected Work</span>
-            <h2 class="section-title">Flagship Projects &amp; Case Studies</h2>
-            <p class="section-subtitle">Click any project to inspect the full architecture, real screenshots, verified metrics, and documentation.</p>
+            <div class="sec-kicker"><span class="kicker-dash"></span> Portfolio</div>
+            <h2 class="sec-title">My Featured <span class="text-blue">Projects</span></h2>
+            <p class="sec-sub">Filter by target track and click any project to inspect full architecture, real UI screenshots, and verified metrics.</p>
           </div>
-          <div class="filter-bar" role="tablist" aria-label="Filter projects by track">
+
+          <div class="filter-bar" role="tablist" aria-label="Filter projects by role track">
             <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All (6)</button>
             <button class="filter-btn" data-filter="ba" role="tab" aria-selected="false">Business Analysis</button>
             <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI &amp; Data</button>
@@ -194,166 +294,86 @@
         </div>
 
         <div class="projects-grid" id="projectsGrid">
-          <!-- Project cards rendered dynamically by app.js for interactive modal & filtering -->
+          <!-- Rendered dynamically by app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Published Research Spotlight -->
-    <section class="section section-alt" id="research">
+    <!-- ==================== ACADEMIC & PROFESSIONAL JOURNEY ==================== -->
+    <section class="section section-soft" id="journey">
       <div class="container">
-        <div class="research-banner reveal">
-          <div class="research-copy">
-            <span class="eyebrow eyebrow-emerald">Published Research &middot; ICECH 2026</span>
-            <h2>HSBC Case Study on Sustainability Disclosure under IFRS S1/S2</h2>
-            <p>
-              Co-authored research published in the <strong>ICECH 2026 International Conference Proceedings</strong>. Translated IFRS S1/S2 sustainability disclosure standards into a structured criteria framework, mapped HSBC’s corporate ESG and financial reports, and engineered an accompanying Python NLP compliance pipeline (<code>FinAI.ipynb</code>) combining TF-IDF, BM25, Jaccard, Sentence Transformers, and hybrid rank fusion.
-            </p>
-            <div class="research-highlights">
-              <div class="rh-item">
-                <strong>Hybrid Retrieval</strong>
-                <span>TF-IDF + BM25 + Sentence Embeddings</span>
-              </div>
-              <div class="rh-item">
-                <strong>Greenwashing Checks</strong>
-                <span>Narrative claims vs. quantitative KPIs</span>
-              </div>
-              <div class="rh-item">
-                <strong>Statistical Rigor</strong>
-                <span>NMF topics &amp; bootstrap confidence intervals</span>
-              </div>
-            </div>
-            <div class="research-actions">
-              <a href="https://github.com/phonghoang5800-droid/IFRS-ESG-Disclosure-Intelligence" target="_blank" rel="noopener" class="btn btn-primary">
-                View NLP Repository
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-              </a>
-              <button class="btn btn-secondary" data-open-project="ifrs-esg">Read Full Case Study</button>
-            </div>
-          </div>
-
-          <div class="research-diagram">
-            <div class="pipeline-viz">
-              <div class="pipe-title">IFRS S1/S2 NLP Compliance Pipeline</div>
-              <div class="pipe-step">
-                <span class="pipe-num">01</span>
-                <div>
-                  <strong>PDF Extraction &amp; Diagnostics</strong>
-                  <span>Multi-year corporate ESG &amp; annual reports via pdfplumber</span>
-                </div>
-              </div>
-              <div class="pipe-arrow" aria-hidden="true"></div>
-              <div class="pipe-step">
-                <span class="pipe-num">02</span>
-                <div>
-                  <strong>Hybrid Evidence Retrieval</strong>
-                  <span>TF-IDF + BM25 + Jaccard + Sentence Transformers fusion</span>
-                </div>
-              </div>
-              <div class="pipe-arrow" aria-hidden="true"></div>
-              <div class="pipe-step">
-                <span class="pipe-num">03</span>
-                <div>
-                  <strong>Alignment &amp; Consistency Scoring</strong>
-                  <span>Coverage by reporting year + narrative vs. indicator audit</span>
-                </div>
-              </div>
-              <div class="pipe-arrow" aria-hidden="true"></div>
-              <div class="pipe-step pipe-step-accent">
-                <span class="pipe-num">04</span>
-                <div>
-                  <strong>Structured Outputs</strong>
-                  <span>CSV tables, NMF topics, sensitivity charts &amp; HTML summary</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education, Experience, Certifications & Skills -->
-    <section class="section" id="credentials">
-      <div class="container">
-        <div class="section-header reveal">
-          <div>
-            <span class="eyebrow">Background</span>
-            <h2 class="section-title">Education, Experience &amp; Certifications</h2>
-          </div>
+        <div class="sec-head-center reveal">
+          <div class="sec-kicker"><span class="kicker-dash"></span> Education &amp; Credentials</div>
+          <h2 class="sec-title">My Academic and <span class="text-blue">Professional Journey</span></h2>
         </div>
 
-        <div class="cred-grid">
-          <!-- Education & Experience -->
-          <div class="cred-col reveal">
-            <h3 class="col-heading">Education &amp; Experience</h3>
+        <div class="journey-grid">
+          <!-- Left Column: Education & Experience -->
+          <div class="journey-col reveal">
+            <div class="journey-col-head">
+              <span class="j-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </span>
+              <h3>Education &amp; Experience</h3>
+            </div>
 
-            <div class="timeline-card">
-              <div class="tl-top">
-                <span class="tl-badge">Expected 2027</span>
-                <span class="tl-score">GPA 3.45 / 4.0</span>
-              </div>
+            <div class="j-card">
+              <div class="j-date">2023 – EXPECTED 2027 &middot; GPA 3.45 / 4.0</div>
               <h4>VNU International School — Vietnam National University, Hanoi</h4>
-              <p class="tl-sub">Bachelor of Financial Technology and Digital Business</p>
-              <p class="tl-desc">Final-year undergraduate focusing on quantitative financial modeling, digital business systems, business analysis, and explainable AI.</p>
+              <p class="j-role">Bachelor of Financial Technology and Digital Business</p>
+              <p class="j-desc">Final-year undergraduate specializing in digital business systems, quantitative financial modeling, business analysis, and explainable AI.</p>
             </div>
 
-            <div class="timeline-card">
-              <div class="tl-top">
-                <span class="tl-badge tl-badge-soft">3 Months</span>
-                <span class="tl-score">Marketing Dept.</span>
-              </div>
+            <div class="j-card">
+              <div class="j-date">2026 &middot; INTERNATIONAL CONFERENCE PROCEEDINGS</div>
+              <h4>ICECH 2026 — Published Research Co-Author</h4>
+              <p class="j-role">HSBC Case Study on Sustainability Disclosure under IFRS S1/S2</p>
+              <p class="j-desc">Translated IFRS S1/S2 standards into structured assessment criteria, mapped corporate ESG/financial reports, and built a Python hybrid NLP audit pipeline.</p>
+            </div>
+
+            <div class="j-card">
+              <div class="j-date">3 MONTHS &middot; MARKETING DEPARTMENT</div>
               <h4>Ula Edu — Brand Management Trainee (Intern)</h4>
-              <p class="tl-sub">Hanoi, Vietnam</p>
-              <p class="tl-desc">Gained commercial exposure supporting brand management workflows, structured reporting, and cross-team coordination in an education startup.</p>
+              <p class="j-role">Hanoi, Vietnam</p>
+              <p class="j-desc">Supported brand management operations, structured campaign reporting, and cross-functional coordination in an education organization.</p>
             </div>
           </div>
 
-          <!-- Certifications & Skills -->
-          <div class="cred-col reveal" style="--delay: 100ms">
-            <h3 class="col-heading">Certifications &amp; Technical Stack</h3>
-
-            <div class="cert-list">
-              <div class="cert-item">
-                <span class="cert-dot"></span>
-                <div>
-                  <strong>Google Data Analysis with Python Specialization</strong>
-                  <span>Google, Coursera (6 courses) &middot; Nov 2026</span>
-                </div>
-              </div>
-              <div class="cert-item">
-                <span class="cert-dot cert-dot-indigo"></span>
-                <div>
-                  <strong>Google AI Professional Certificate</strong>
-                  <span>Google, Coursera (8 courses) &middot; Sep 2026</span>
-                </div>
-              </div>
-              <div class="cert-item">
-                <span class="cert-dot cert-dot-emerald"></span>
-                <div>
-                  <strong>Google Business Intelligence Professional Certificate</strong>
-                  <span>Google, Coursera</span>
-                </div>
-              </div>
-              <div class="cert-item">
-                <span class="cert-dot cert-dot-amber"></span>
-                <div>
-                  <strong>English Proficiency — Aptis B2</strong>
-                  <span>Vietnamese (Native) &middot; English (Professional Working)</span>
-                </div>
-              </div>
+          <!-- Right Column: Certifications & Core Skills -->
+          <div class="journey-col reveal" style="--delay: 100ms">
+            <div class="journey-col-head">
+              <span class="j-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </span>
+              <h3>Certifications &amp; Toolkit</h3>
             </div>
 
-            <div class="skills-box">
-              <div class="skill-group">
-                <span class="skill-label">Business &amp; Process</span>
-                <div class="skill-pills">
-                  <span>URD</span><span>Use Cases</span><span>User Stories</span><span>API Data Fields</span><span>Functional Testing</span><span>Quotation &amp; Receivables</span><span>BI Reporting</span>
+            <div class="j-card">
+              <div class="j-date">NOV 2026 &middot; GOOGLE, COURSERA (6 COURSES)</div>
+              <h4>Google Data Analysis with Python Specialization</h4>
+              <p class="j-desc">End-to-end Python data cleaning, exploratory data analysis, statistical evaluation, and reproducible notebook workflows.</p>
+            </div>
+
+            <div class="j-card">
+              <div class="j-date">SEP 2026 &middot; GOOGLE, COURSERA (8 COURSES)</div>
+              <h4>Google AI Professional &amp; Business Intelligence Certificates</h4>
+              <p class="j-desc">Completed Google AI Professional Certificate (8 courses), Google Business Intelligence Professional Certificate, and English <strong>Aptis B2</strong>.</p>
+            </div>
+
+            <div class="j-card j-skills-card">
+              <div class="j-date">CORE COMPETENCIES</div>
+              <div class="skill-groups">
+                <div>
+                  <span class="sg-title">Business &amp; Process</span>
+                  <div class="chip-row">
+                    <span>URD</span><span>Use Cases</span><span>User Stories</span><span>API Data Fields</span><span>Functional Testing</span><span>Quotation &amp; Receivables</span><span>BI Reporting</span>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-group">
-                <span class="skill-label">Data, AI &amp; Web</span>
-                <div class="skill-pills">
-                  <span>Python (pandas, NumPy)</span><span>Scikit-learn</span><span>CatBoost &amp; XGBoost</span><span>SHAP &amp; XAI</span><span>SQL / SQLite</span><span>FastAPI</span><span>R Shiny</span><span>Solidity / Hardhat</span><span>Excel &amp; PowerPoint</span>
+                <div>
+                  <span class="sg-title">Data, AI &amp; Web</span>
+                  <div class="chip-row">
+                    <span>Python (pandas, NumPy)</span><span>Scikit-learn</span><span>CatBoost &amp; XGBoost</span><span>SHAP</span><span>SQL / SQLite</span><span>FastAPI</span><span>R Shiny</span><span>Solidity / Hardhat</span><span>Excel</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -362,80 +382,248 @@
       </div>
     </section>
 
-    <!-- Downloadable CVs & Portfolio PDF -->
-    <section class="section section-alt" id="resumes">
+    <!-- ==================== UPGRADED RESUMES & PORTFOLIO PDF BENTO ==================== -->
+    <section class="section" id="resumes">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="sec-head sec-head-wrap reveal">
           <div>
-            <span class="eyebrow">Recruiter Ready</span>
-            <h2 class="section-title">Download Tailored CVs &amp; Portfolio PDF</h2>
-            <p class="section-subtitle">Role-focused 1-page resumes and a concise visual portfolio PDF ready for immediate review.</p>
+            <div class="sec-kicker"><span class="kicker-dash"></span> Recruiter Kit</div>
+            <h2 class="sec-title">Tailored CVs &amp; <span class="text-blue">Visual Portfolio PDF</span></h2>
+            <p class="sec-sub">Inspect every page right in your browser or download clean, ATS-ready PDFs tailored for Business Analysis, Data/AI, and Market Research.</p>
+          </div>
+          <div class="doc-meta-pill">
+            <span class="live-dot"></span> English &middot; Harvard Layout &middot; Updated Nov 2026
           </div>
         </div>
 
-        <div class="resume-grid">
-          <a class="resume-card resume-featured reveal" href="assets/Portfolio%20Nguyen%20Hoang%20Phong.pdf" target="_blank" rel="noopener">
-            <span class="resume-tag">Complete Visual PDF</span>
-            <h3>Project Portfolio PDF</h3>
-            <p>All 6 flagship projects, verified metrics, architecture overviews, and ICECH 2026 research in one clean PDF.</p>
-            <span class="resume-cta">Download Portfolio PDF &rarr;</span>
-          </a>
+        <!-- Featured Wide Cobalt-Navy Bento Banner with Fanned 3-Page Portfolio Stack -->
+        <div class="bento-portfolio spotlight-card reveal">
+          <svg class="bento-waves" viewBox="0 0 1100 360" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M-40 280 C 260 170, 520 350, 820 210 C 980 140, 1080 200, 1180 150" stroke="white" stroke-opacity="0.1" stroke-width="1.5" fill="none"/>
+            <path d="M-40 210 C 260 100, 520 280, 820 140 C 980 70, 1080 130, 1180 80" stroke="white" stroke-opacity="0.08" stroke-width="1.5" fill="none"/>
+          </svg>
 
-          <a class="resume-card reveal" style="--delay: 60ms" href="assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Business%20Analyst%20Intern.pdf" target="_blank" rel="noopener">
-            <span class="resume-tag tag-blue">Track 01</span>
-            <h3>Business Analyst Intern CV</h3>
-            <p>Highlights SocialShield-VN, RideLink Chain API &amp; workflow specs, URD, functional testing, and BI process analysis.</p>
-            <span class="resume-cta">Download BA CV &rarr;</span>
-          </a>
+          <div class="bento-copy">
+            <div class="bento-badges">
+              <span class="bento-pill bento-pill-bright">Complete Visual Portfolio</span>
+              <span class="bento-pill">5 Pages &middot; A4 Consulting PDF</span>
+              <span class="bento-pill">Real UI Screenshots</span>
+            </div>
+            <h3>Project Portfolio PDF — Executive Showcase</h3>
+            <p>A crisp 5-page visual document ready to attach alongside any application. Features real SocialShield-VN &amp; InterBank screenshots, Hanoi Homes 463/463 QA verification, RideLink specs, and ICECH 2026 research.</p>
+            <div class="bento-checklist">
+              <span>&#10003; All 6 Flagship Projects</span>
+              <span>&#10003; Verified Real Metrics</span>
+              <span>&#10003; Direct GitHub Links</span>
+            </div>
+            <div class="bento-actions">
+              <button type="button" class="pill-btn pill-btn-white" data-preview-doc="portfolio">
+                Preview All 5 Pages
+                <span class="arrow-circle arrow-circle-blue" aria-hidden="true">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span>
+              </button>
+              <a href="assets/Portfolio%20Nguyen%20Hoang%20Phong.pdf" download="Portfolio Nguyen Hoang Phong.pdf" class="pill-btn pill-btn-ghost-white">
+                Download PDF &darr;
+              </a>
+            </div>
+          </div>
 
-          <a class="resume-card reveal" style="--delay: 120ms" href="assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Data%20Science%20Intern.pdf" target="_blank" rel="noopener">
-            <span class="resume-tag tag-indigo">Track 02</span>
-            <h3>AI / Data Science Intern CV</h3>
-            <p>Highlights Hanoi Homes CatBoost + SHAP + 463/463 tests, Orange Telecom Churn ROC-AUC 0.90, and Python/SQLite stack.</p>
-            <span class="resume-cta">Download AI/DS CV &rarr;</span>
-          </a>
+          <!-- Animated Fanned 3-Page Real Preview Stack -->
+          <div class="bento-fan" data-preview-doc="portfolio" role="button" tabindex="0" aria-label="Preview 5-page Portfolio PDF">
+            <div class="fan-sheet fan-left">
+              <img src="assets/previews/portfolio-4.png" alt="Portfolio Page 4 preview" loading="lazy" />
+            </div>
+            <div class="fan-sheet fan-right">
+              <img src="assets/previews/portfolio-2.png" alt="Portfolio Page 2 preview" loading="lazy" />
+            </div>
+            <div class="fan-sheet fan-front">
+              <img src="assets/previews/portfolio-1.png" alt="Portfolio Page 1 cover preview" loading="lazy" />
+              <span class="fan-hint">Click to preview 5 pages</span>
+            </div>
+          </div>
+        </div>
 
-          <a class="resume-card reveal" style="--delay: 180ms" href="assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Market%20Research%20Intern.pdf" target="_blank" rel="noopener">
-            <span class="resume-tag tag-emerald">Track 03</span>
-            <h3>Market Research Intern CV</h3>
-            <p>Highlights HSBC IFRS S1/S2 research (ICECH 2026), Hanoi apartment market analysis, Ula Edu internship, and EDA.</p>
-            <span class="resume-cta">Download Research CV &rarr;</span>
-          </a>
+        <!-- 3 Role-Specific CV Track Cards with Live A4 Thumbnails -->
+        <div class="cv-grid">
+          <article class="cv-card spotlight-card reveal" style="--delay: 40ms">
+            <div class="cv-preview-wrap" data-preview-doc="cv-ba" role="button" tabindex="0" aria-label="Quick view Business Analyst Intern CV">
+              <div class="cv-paper">
+                <img src="assets/previews/cv-ba.png" alt="Business Analyst Intern CV preview" loading="lazy" />
+              </div>
+              <span class="cv-zoom-pill">Quick View</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-top-row">
+                <span class="cv-track-pill">Track 01 &middot; BA</span>
+                <span class="cv-meta">1 Page &middot; PDF</span>
+              </div>
+              <h3>Business Analyst Intern</h3>
+              <ul class="cv-points">
+                <li><strong>SocialShield-VN</strong> &amp; <strong>RideLink Chain</strong> BA &amp; API specs</li>
+                <li>URD, use cases, user stories &amp; functional testing</li>
+                <li>Process analysis: quotation, receivables, BI reporting</li>
+              </ul>
+              <div class="cv-actions">
+                <button type="button" class="cv-btn cv-btn-ghost" data-preview-doc="cv-ba">Preview</button>
+                <a class="cv-btn cv-btn-blue" href="assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Business%20Analyst%20Intern.pdf" download="CV Nguyen Hoang Phong - Business Analyst Intern.pdf">Download PDF &darr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cv-card spotlight-card reveal" style="--delay: 110ms">
+            <div class="cv-preview-wrap" data-preview-doc="cv-ds" role="button" tabindex="0" aria-label="Quick view AI and Data Science Intern CV">
+              <div class="cv-paper">
+                <img src="assets/previews/cv-ds.png" alt="AI Engineer and Data Science Intern CV preview" loading="lazy" />
+              </div>
+              <span class="cv-zoom-pill">Quick View</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-top-row">
+                <span class="cv-track-pill cv-track-indigo">Track 02 &middot; AI / Data</span>
+                <span class="cv-meta">1 Page &middot; PDF</span>
+              </div>
+              <h3>AI / Data Science Intern</h3>
+              <ul class="cv-points">
+                <li><strong>Hanoi Homes:</strong> CatBoost (14.57% MAPE), SHAP &amp; 463/463 QA</li>
+                <li><strong>Telecom Churn:</strong> Soft Voting Ensemble (ROC-AUC 0.90)</li>
+                <li>Python, Scikit-learn, XGBoost, R Shiny &amp; SQLite</li>
+              </ul>
+              <div class="cv-actions">
+                <button type="button" class="cv-btn cv-btn-ghost" data-preview-doc="cv-ds">Preview</button>
+                <a class="cv-btn cv-btn-blue" href="assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Data%20Science%20Intern.pdf" download="CV Nguyen Hoang Phong - Data Science Intern.pdf">Download PDF &darr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cv-card spotlight-card reveal" style="--delay: 180ms">
+            <div class="cv-preview-wrap" data-preview-doc="cv-mr" role="button" tabindex="0" aria-label="Quick view Market Research Intern CV">
+              <div class="cv-paper">
+                <img src="assets/previews/cv-mr.png" alt="Market Research Intern CV preview" loading="lazy" />
+              </div>
+              <span class="cv-zoom-pill">Quick View</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-top-row">
+                <span class="cv-track-pill cv-track-emerald">Track 03 &middot; Research</span>
+                <span class="cv-meta">1 Page &middot; PDF</span>
+              </div>
+              <h3>Market Research Intern</h3>
+              <ul class="cv-points">
+                <li><strong>ICECH 2026 Co-Author:</strong> HSBC IFRS S1/S2 study</li>
+                <li><strong>Hanoi Homes:</strong> 262-project housing market analysis</li>
+                <li><strong>Ula Edu</strong> brand internship, EDA, Excel &amp; Google BI</li>
+              </ul>
+              <div class="cv-actions">
+                <button type="button" class="cv-btn cv-btn-ghost" data-preview-doc="cv-mr">Preview</button>
+                <a class="cv-btn cv-btn-blue" href="assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Market%20Research%20Intern.pdf" download="CV Nguyen Hoang Phong - Market Research Intern.pdf">Download PDF &darr;</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="section contact-section" id="contact">
-      <div class="container">
-        <div class="contact-card reveal">
-          <span class="eyebrow eyebrow-light">Let’s Connect</span>
-          <h2>Looking for a detail-oriented intern who bridges business and data?</h2>
-          <p>Available for Business Analyst, Data Science / AI, and Market Research internships in Hanoi. Happy to share project demos, repositories, or discuss how I can support your team.</p>
-          <div class="contact-actions">
-            <a href="mailto:phonghoang5800@gmail.com" class="btn btn-white">
-              phonghoang5800@gmail.com
-            </a>
-            <button class="btn btn-outline-light" id="copyEmailBtn" type="button">Copy Email</button>
-            <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411" target="_blank" rel="noopener" class="btn btn-outline-light">LinkedIn</a>
-            <a href="https://github.com/phonghoang5800-droid" target="_blank" rel="noopener" class="btn btn-outline-light">GitHub</a>
+    <!-- ==================== 2-COLUMN CONTACT SECTION (BEHANCE STYLE PRO) ==================== -->
+    <section class="section section-soft" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <div class="sec-kicker"><span class="kicker-dash"></span> Contact Me</div>
+          <h2 class="sec-title">Let’s Talk for Your <span class="text-blue">Next Internship</span></h2>
+          <p class="contact-lead">
+            Available for Business Analyst, Data Science / AI, and Market Research internships in Hanoi. Reach out directly for project walkthroughs, repositories, or interview scheduling.
+          </p>
+
+          <div class="contact-items">
+            <div class="c-item">
+              <span class="c-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <div>
+                <span class="c-label">Email</span>
+                <a href="mailto:phonghoang5800@gmail.com" class="c-val">phonghoang5800@gmail.com</a>
+              </div>
+              <button type="button" class="copy-mini-btn" id="copyEmailBtn">Copy</button>
+            </div>
+
+            <div class="c-item">
+              <span class="c-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <span class="c-label">Location</span>
+                <span class="c-val">Hanoi, Vietnam</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <span class="c-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </span>
+              <div>
+                <span class="c-label">LinkedIn &amp; GitHub</span>
+                <div class="c-links">
+                  <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+                  <span>&middot;</span>
+                  <a href="https://github.com/phonghoang5800-droid" target="_blank" rel="noopener">GitHub &nearr;</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <form class="contact-form-card reveal" style="--delay: 100ms" id="contactForm">
+          <div class="form-row-2">
+            <div class="field">
+              <label for="cName">Your Name *</label>
+              <input id="cName" type="text" placeholder="Ex. Minh Anh (HR)" required />
+            </div>
+            <div class="field">
+              <label for="cEmail">Email *</label>
+              <input id="cEmail" type="email" placeholder="hr@company.com" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="cRole">Role / Topic</label>
+            <input id="cRole" type="text" placeholder="Business Analyst Intern / Data Science Intern" />
+          </div>
+          <div class="field">
+            <label for="cMsg">Your Message *</label>
+            <textarea id="cMsg" rows="4" placeholder="Share role details or a convenient time for a quick chat..." required></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="pill-btn pill-btn-blue pill-btn-lg">
+              Send Message
+              <span class="arrow-circle" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </button>
+            <span class="form-note" id="formNote">Opens your mail client pre-filled</span>
+          </div>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span>&copy; 2026 Nguyen Hoang Phong &middot; Hanoi, Vietnam</span>
-      <span>Built with clean HTML, CSS &amp; JavaScript &middot; Hosted on GitHub Pages</span>
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark-sm">NP</span>
+        <span>&copy; 2026 Nguyen Hoang Phong &middot; Hanoi, Vietnam</span>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#resumes">Resumes</a>
+        <a href="https://github.com/phonghoang5800-droid" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Interactive Case Study Modal -->
+  <!-- Interactive Case Study & Document Preview Lightbox Modal -->
   <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-sheet">
-      <button class="modal-close" id="modalClose" aria-label="Close case study">&times;</button>
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
       <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
