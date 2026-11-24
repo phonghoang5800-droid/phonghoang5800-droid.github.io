@@ -10,9 +10,8 @@ const PROJECTS = [
     tags: ['Business Analysis', 'Explainable AI'],
     period: 'May 2026',
     role: 'Team Leader · Business Analyst & ML Developer',
-    title: 'SocialShield-VN — Vietnamese SMS & Phishing Warning System',
-    summary:
-      'End-to-end web system detecting Vietnamese impersonation scams across SMS, links, and CSV/TXT batches with calibrated 0–100 risk scoring, Global/Local XAI, and RBAC administration.',
+    title: 'SocialShield-VN',
+    summary: 'Explainable Vietnamese SMS & phishing link warning web app with 0–100 risk scoring.',
     kpis: [
       { value: '85.59%', label: 'Macro F1 (X-HRS-MTSD+)' },
       { value: '3,114', label: 'Labeled VN SMS Rows' },
@@ -45,9 +44,8 @@ const PROJECTS = [
     tags: ['Data Science', 'Explainable ML'],
     period: 'Oct 2026 – Present',
     role: 'ML & System Developer',
-    title: 'Hanoi Homes — Apartment Price Estimation & Advisory Web App',
-    summary:
-      'Explainable housing valuation system cleaning 1,856 raw Hanoi real estate listings into 846 validated records across 262 projects, powered by CatBoost + SHAP and connected to R Shiny & SQLite.',
+    title: 'Hanoi Homes',
+    summary: 'Hanoi apartment price estimator powered by CatBoost + SHAP on R Shiny & SQLite.',
     kpis: [
       { value: '14.57%', label: 'CatBoost MAPE' },
       { value: '463/463', label: 'QA Tests Passed' },
@@ -73,9 +71,8 @@ const PROJECTS = [
     tags: ['FinTech Systems', 'QA Testing'],
     period: '2026',
     role: 'FinTech Systems Designer & QA',
-    title: 'InterBank VerifyChain — Secure Interbank Transaction Simulation',
-    summary:
-      'Interactive browser-based interbank settlement and reconciliation simulator featuring Web Crypto OTP, SHA-256 canonical hashing, RSA digital signatures, and a tamper-evident audit ledger.',
+    title: 'InterBank VerifyChain',
+    summary: 'Interbank settlement simulator with Web Crypto OTP, SHA-256, RSA signing & audit ledger.',
     kpis: [
       { value: '19 Cases', label: 'Documented QA Suite' },
       { value: 'SHA-256', label: '+ RSA Signing' },
@@ -105,9 +102,8 @@ const PROJECTS = [
     tags: ['System Analysis', 'Web3 Escrow'],
     period: '2026',
     role: 'System Analysis, BA & Functional Testing',
-    title: 'RideLink Chain — Decentralized Ride-Hailing & Escrow Prototype',
-    summary:
-      'Full-stack blockchain-assisted ride booking and split-payment prototype combining Node.js/Express with a Solidity 0.8.20 escrow smart contract, QR trip verification, and hash-linked audit ledger.',
+    title: 'RideLink Chain',
+    summary: 'Decentralized ride-hailing prototype with Solidity escrow, API specs & QR verification.',
     kpis: [
       { value: '3 Portals', label: 'Passenger · Driver · Admin' },
       { value: 'Solidity', label: '0.8.20 Smart Escrow' },
@@ -132,9 +128,8 @@ const PROJECTS = [
     tags: ['ICECH 2026 Published', 'ESG NLP'],
     period: '2026',
     role: 'Co-Author & NLP Pipeline Developer',
-    title: 'IFRS S1/S2 ESG Disclosure Intelligence — HSBC Case Study',
-    summary:
-      'Published ICECH 2026 research and Python NLP compliance pipeline mapping corporate annual & ESG reports to IFRS S1/S2 criteria with 4-way hybrid retrieval and greenwashing inconsistency checks.',
+    title: 'IFRS S1/S2 ESG Intelligence',
+    summary: 'ICECH 2026 HSBC study & Python hybrid NLP pipeline for ESG disclosure compliance.',
     kpis: [
       { value: 'ICECH ’26', label: 'Published Proceedings' },
       { value: '4-Way', label: 'Hybrid Rank Fusion' },
@@ -159,9 +154,8 @@ const PROJECTS = [
     tags: ['Ensemble ML', 'CRM Analytics'],
     period: '2025',
     role: 'AI/ML Team Member',
-    title: 'Hybrid AI Customer Churn Prediction — Orange Telecom CRM',
-    summary:
-      'Proactive telecom customer retention pipeline combining multivariate EDA on charges, usage, and call-center records with a Hybrid Soft Voting ensemble classifier.',
+    title: 'Orange Telecom Churn AI',
+    summary: 'CRM churn prediction with multivariate EDA and Hybrid Soft Voting ensemble.',
     kpis: [
       { value: '0.90', label: 'Test ROC-AUC' },
       { value: '92.5%', label: 'Test Accuracy' },
@@ -352,7 +346,6 @@ function renderProjects() {
         <div class="project-pills">
           <span class="p-pill">${p.tags[0]}</span>
           <span class="p-pill p-pill-soft">${p.tags[1]}</span>
-          <span class="p-pill p-pill-soft">${p.period}</span>
         </div>
         <h3 class="project-title">${p.title}</h3>
         <p class="project-summary">${p.summary}</p>
@@ -360,7 +353,7 @@ function renderProjects() {
           ${p.kpis.map(k => `<div class="kpi-box"><strong>${k.value}</strong><span>${k.label}</span></div>`).join('')}
         </div>
         <div class="project-footer">
-          <span class="view-case-link">Inspect Case Study &rarr;</span>
+          <span class="view-case-link">Case Study &rarr;</span>
           <a class="repo-ext-link" href="${p.repoUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">GitHub &nearr;</a>
         </div>
       </div>
