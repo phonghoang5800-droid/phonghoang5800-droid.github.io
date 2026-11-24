@@ -344,31 +344,10 @@ const DOCUMENTS = {
       { src: 'assets/previews/portfolio-4.png', label: 'Page 4 / 5 — RideLink Chain & InterBank VerifyChain' },
       { src: 'assets/previews/portfolio-5.png', label: 'Page 5 / 5 — HSBC IFRS S1/S2 Study (ICECH 2026) & Contact' }
     ]
-  },
-  'cv-ba': {
-    eyebrow: 'Track 01 · 1-Page English Resume',
-    title: 'CV — Business Analyst Intern',
-    downloadUrl: 'assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Business%20Analyst%20Intern.pdf',
-    downloadName: 'CV Nguyen Hoang Phong - Business Analyst Intern.pdf',
-    pages: [{ src: 'assets/previews/cv-ba.png', label: 'Page 1 / 1 — Business Analyst Intern CV' }]
-  },
-  'cv-ds': {
-    eyebrow: 'Track 02 · 1-Page English Resume',
-    title: 'CV — AI / Data Science Intern',
-    downloadUrl: 'assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Data%20Science%20Intern.pdf',
-    downloadName: 'CV Nguyen Hoang Phong - Data Science Intern.pdf',
-    pages: [{ src: 'assets/previews/cv-ds.png', label: 'Page 1 / 1 — AI / Data Science Intern CV' }]
-  },
-  'cv-mr': {
-    eyebrow: 'Track 03 · 1-Page English Resume',
-    title: 'CV — Market Research Intern',
-    downloadUrl: 'assets/cv/CV%20Nguyen%20Hoang%20Phong%20-%20Market%20Research%20Intern.pdf',
-    downloadName: 'CV Nguyen Hoang Phong - Market Research Intern.pdf',
-    pages: [{ src: 'assets/previews/cv-mr.png', label: 'Page 1 / 1 — Market Research Intern CV' }]
   }
 };
 
-function openDocPreview(key) {
+function openDocPreview(key, pageNum) {
   const doc = DOCUMENTS[key];
   if (!doc) return;
 
@@ -384,8 +363,8 @@ function openDocPreview(key) {
       </div>
     </div>
     <div class="doc-pages-stack">
-      ${doc.pages.map(pg => `
-        <div class="doc-page-card">
+      ${doc.pages.map((pg, idx) => `
+        <div class="doc-page-card" id="docPage${idx + 1}">
           <img src="${pg.src}" alt="${pg.label}" />
           <div class="doc-page-label"><span>${pg.label}</span><span>High-Res Preview</span></div>
         </div>
@@ -396,6 +375,12 @@ function openDocPreview(key) {
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+
+  if (pageNum) {
+    requestAnimationFrame(() => {
+      document.getElementById(`docPage${pageNum}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
 }
 
 function closeModal() {
@@ -409,11 +394,11 @@ modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 document.querySelectorAll('[data-preview-doc]').forEach(el => {
-  el.addEventListener('click', () => openDocPreview(el.dataset.previewDoc));
+  el.addEventListener('click', () => openDocPreview(el.dataset.previewDoc, el.dataset.previewPage));
   el.addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      openDocPreview(el.dataset.previewDoc);
+      openDocPreview(el.dataset.previewDoc, el.dataset.previewPage);
     }
   });
 });
