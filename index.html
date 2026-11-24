@@ -7,14 +7,14 @@
   <meta name="description" content="Portfolio of Nguyen Hoang Phong — Final-year Financial Technology & Digital Business student at VNU International School (GPA 3.45/4.0). Business Analysis, Data Science, Explainable AI & Market Research." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Minimalist Sticky Top Navbar -->
+  <!-- Sticky Glass Navbar -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#home" class="brand" aria-label="Nguyen Hoang Phong Home">
@@ -58,9 +58,12 @@
   <main>
     <!-- ==================== HERO SECTION ==================== -->
     <section class="hero" id="home">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-copy">
-          <!-- Iconic Figma-style Selection Bounding Box Tag -->
+          <!-- Figma Selection Bounding Box Tag -->
           <div class="hello-box reveal-hero" style="--d: 0ms">
             <span class="handle tl"></span>
             <span class="handle tr"></span>
@@ -76,19 +79,19 @@
           </h1>
 
           <p class="hero-subtitle reveal-hero" style="--d: 170ms">
-            Final-year <strong>Financial Technology &amp; Digital Business</strong> student at <strong>VNU International School</strong> (GPA 3.45/4.0) &amp; <strong>ICECH 2026</strong> published co-author — turning business requirements and raw data into clear, explainable systems.
+            Final-year <strong>Financial Technology &amp; Digital Business</strong> student at <strong>VNU International School</strong> (GPA 3.45/4.0) &amp; <strong>ICECH 2026</strong> published co-author — transforming complex workflows and raw datasets into clear specifications and explainable web systems.
           </p>
 
           <div class="hero-actions reveal-hero" style="--d: 240ms">
             <a href="#projects" class="pill-btn pill-btn-blue pill-btn-lg">
-              Explore Projects
+              Explore 6 Projects
               <span class="arrow-circle" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </span>
             </a>
-            <a href="#resumes" class="pill-btn pill-btn-outline pill-btn-lg">
-              Portfolio PDF
-            </a>
+            <button type="button" class="pill-btn pill-btn-outline pill-btn-lg" data-preview-doc="portfolio">
+              Preview Portfolio PDF
+            </button>
             <a href="https://github.com/phonghoang5800-droid" target="_blank" rel="noopener" class="icon-circle-btn" aria-label="GitHub Profile" title="GitHub Profile">
               <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
@@ -97,43 +100,63 @@
             </a>
           </div>
 
-          <div class="hero-trust-row reveal-hero" style="--d: 310ms">
-            <span><strong>3.45/4.0</strong> GPA</span>
-            <span class="sep">&bull;</span>
-            <span><strong>463/463</strong> QA Tests Passed</span>
-            <span class="sep">&bull;</span>
-            <span><strong>3x</strong> Google Certs</span>
-            <span class="sep">&bull;</span>
-            <span>English <strong>Aptis B2</strong></span>
+          <div class="hero-metrics-strip reveal-hero" style="--d: 310ms">
+            <div class="hm-item"><strong>3.45 / 4.0</strong><span>VNU-IS GPA</span></div>
+            <div class="hm-item"><strong>463 / 463</strong><span>QA Tests Passed</span></div>
+            <div class="hm-item"><strong>ICECH ’26</strong><span>Published Paper</span></div>
+            <div class="hm-item"><strong>Aptis B2</strong><span>3x Google Certs</span></div>
           </div>
         </div>
 
-        <!-- Portrait Composition with Cobalt Organic Backdrop & Cursor Pill Tags -->
+        <!-- Executive Profile & Telemetry Bento Card (Zero Blue-on-Blue Clash) -->
         <div class="hero-visual reveal-hero" style="--d: 180ms">
-          <div class="portrait-stage" id="portraitStage">
-            <svg class="stage-orbit" viewBox="0 0 420 420" fill="none" aria-hidden="true">
-              <circle cx="210" cy="210" r="188" stroke="#2563EB" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="6 8"/>
-              <circle cx="210" cy="210" r="154" stroke="#2563EB" stroke-opacity="0.12" stroke-width="1"/>
-            </svg>
-            <div class="cobalt-blob" aria-hidden="true"></div>
-            <div class="portrait-shell">
-              <img src="assets/images/portrait.jpg" alt="Nguyen Hoang Phong" loading="eager" />
-            </div>
-
-            <!-- Floating Cursor Pill Badges (Signature Motif) -->
+          <div class="exec-card-stage" id="execCard">
+            <!-- Signature Floating Cursor Pills -->
             <div class="cursor-pill cp-1">
-              <svg class="cursor-arrow" width="16" height="16" viewBox="0 0 24 24" fill="#2563EB"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
+              <svg class="cursor-arrow" width="15" height="15" viewBox="0 0 24 24" fill="#2563EB"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
               <span>Business Analyst</span>
             </div>
-
             <div class="cursor-pill cp-2">
-              <svg class="cursor-arrow cursor-arrow-dark" width="16" height="16" viewBox="0 0 24 24" fill="#0A0F1E"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
-              <span>Data Science &amp; AI</span>
+              <svg class="cursor-arrow" width="15" height="15" viewBox="0 0 24 24" fill="#0A0F1E"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
+              <span>Explainable AI</span>
             </div>
 
-            <div class="cursor-pill cp-3">
-              <svg class="cursor-arrow" width="16" height="16" viewBox="0 0 24 24" fill="#2563EB"><path d="M4 2l16 9-7 2-3 7L4 2z"/></svg>
-              <span>Market Research</span>
+            <div class="exec-card">
+              <div class="exec-card-top">
+                <div class="exec-avatar-ring">
+                  <img src="assets/images/portrait.jpg" alt="Nguyen Hoang Phong" loading="eager" />
+                </div>
+                <div class="exec-id">
+                  <span class="exec-badge">Verified Profile &middot; Hanoi</span>
+                  <h2>Nguyen Hoang Phong</h2>
+                  <p>FinTech &amp; Digital Business &middot; VNU-IS</p>
+                </div>
+              </div>
+
+              <div class="exec-divider"></div>
+
+              <div class="exec-signal-list">
+                <div class="sig-row">
+                  <span class="sig-dot sig-blue"></span>
+                  <div class="sig-text"><strong>SocialShield-VN</strong><span>X-HRS-MTSD+ · 85.59% Macro F1 · FastAPI</span></div>
+                  <span class="sig-tag">BA + XAI</span>
+                </div>
+                <div class="sig-row">
+                  <span class="sig-dot sig-emerald"></span>
+                  <div class="sig-text"><strong>Hanoi Homes</strong><span>CatBoost 14.57% MAPE · 463/463 QA Passed</span></div>
+                  <span class="sig-tag">ML Web</span>
+                </div>
+                <div class="sig-row">
+                  <span class="sig-dot sig-indigo"></span>
+                  <div class="sig-text"><strong>HSBC IFRS S1/S2</strong><span>ICECH 2026 Proceedings · Hybrid NLP</span></div>
+                  <span class="sig-tag">Research</span>
+                </div>
+              </div>
+
+              <div class="exec-card-foot">
+                <span>6 Shipped Case Studies</span>
+                <a href="#projects">View Showcase &rarr;</a>
+              </div>
             </div>
           </div>
         </div>
@@ -151,7 +174,6 @@
           <span>Market Research</span><i class="star">&#10022;</i>
           <span>IFRS S1/S2 ESG</span><i class="star">&#10022;</i>
           <span>API Specs &amp; QA Testing</span><i class="star">&#10022;</i>
-          <!-- Seamless loop duplicate -->
           <span>Business Analysis</span><i class="star">&#10022;</i>
           <span>Data Science &amp; ML</span><i class="star">&#10022;</i>
           <span>Explainable AI (SHAP / XAI)</span><i class="star">&#10022;</i>
@@ -163,7 +185,7 @@
       </div>
     </div>
 
-    <!-- ==================== CAPABILITIES / SERVICES ==================== -->
+    <!-- ==================== CAPABILITIES ==================== -->
     <section class="section" id="capabilities">
       <div class="container">
         <div class="sec-head reveal">
@@ -181,30 +203,39 @@
 
         <div class="services-grid">
           <article class="service-card spotlight-card reveal">
-            <div class="service-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+            <div class="service-top">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+              </div>
+              <span class="service-num">01</span>
             </div>
             <h3>Business &amp; System Analysis</h3>
-            <p>Translating real business flows into crisp URD documentation, use cases, user stories, API data field specifications, and structured functional test suites.</p>
+            <p>Translating ambiguous business workflows into crisp URD documentation, use cases, user stories, API data field specifications, and structured functional test suites.</p>
             <div class="chip-row">
               <span>URD &amp; Use Cases</span><span>API Data Fields</span><span>Functional QA</span>
             </div>
           </article>
 
           <article class="service-card spotlight-card reveal" style="--delay: 80ms">
-            <div class="service-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            <div class="service-top">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </div>
+              <span class="service-num">02</span>
             </div>
             <h3>Data Science &amp; Explainable AI</h3>
-            <p>End-to-end pipelines from raw data validation and multi-model benchmarking to SHAP / Local XAI explanations integrated with FastAPI, R Shiny, and SQLite.</p>
+            <p>End-to-end pipelines from raw data validation and multi-model benchmarking to SHAP &amp; Local XAI explanations deployed with FastAPI, R Shiny, and SQLite.</p>
             <div class="chip-row">
               <span>Python &amp; CatBoost</span><span>SHAP &amp; XAI</span><span>SQLite &amp; FastAPI</span>
             </div>
           </article>
 
           <article class="service-card spotlight-card reveal" style="--delay: 160ms">
-            <div class="service-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+            <div class="service-top">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+              </div>
+              <span class="service-num">03</span>
             </div>
             <h3>Market &amp; Corporate Research</h3>
             <p>Extracting, verifying, and mapping corporate ESG, financial, and real estate datasets into criteria-based audits, driver analyses, and stakeholder-ready BI insights.</p>
@@ -218,9 +249,8 @@
 
     <!-- ==================== FULL-BLEED COBALT ABOUT ME BAND ==================== -->
     <section class="about-band" id="about">
-      <!-- Topographic contour line-wave SVG background -->
       <svg class="about-waves" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M-80 120 C 260 20, 520 260, 880 130 C 1180 20, 1340 160, 1540 90" stroke="white" stroke-opacity="0.11" stroke-width="1.5" fill="none"/>
+        <path d="M-80 120 C 260 20, 520 260, 880 130 C 1180 20, 1340 160, 1540 90" stroke="white" stroke-opacity="0.12" stroke-width="1.5" fill="none"/>
         <path d="M-80 210 C 280 90, 560 330, 920 200 C 1220 90, 1360 240, 1540 170" stroke="white" stroke-opacity="0.09" stroke-width="1.5" fill="none"/>
         <path d="M-80 310 C 310 190, 590 420, 960 290 C 1240 180, 1380 330, 1540 260" stroke="white" stroke-opacity="0.08" stroke-width="1.5" fill="none"/>
         <path d="M-80 410 C 330 300, 620 490, 1000 380 C 1270 280, 1400 420, 1540 360" stroke="white" stroke-opacity="0.07" stroke-width="1.5" fill="none"/>
@@ -238,7 +268,7 @@
           <div class="sec-kicker kicker-white"><span class="kicker-dash dash-white"></span> About Me</div>
           <h2 class="about-title">Who is <span class="underline-white">Nguyen Hoang Phong?</span></h2>
           <p class="about-desc">
-            I’m a final-year Financial Technology and Digital Business student at <strong>VNU International School – Vietnam National University, Hanoi</strong>. I enjoy working at the intersection of business requirements, structured data, and practical technology — whether defining API data fields and URD flows for a dev team, validating housing datasets for CatBoost + SHAP models, or auditing corporate IFRS S1/S2 sustainability reports.
+            I’m a final-year Financial Technology and Digital Business student at <strong>VNU International School – Vietnam National University, Hanoi</strong>. I thrive at the bridge between business needs, clean data, and engineering — whether specifying API data fields and URD flows for a development team, validating housing datasets for CatBoost + SHAP models, or auditing corporate IFRS S1/S2 sustainability disclosures.
           </p>
 
           <div class="about-stats">
@@ -252,7 +282,7 @@
             </div>
             <div class="a-stat">
               <strong data-count="6" data-decimals="0" data-suffix="+">6+</strong>
-              <span>End-to-End Projects</span>
+              <span>Flagship Projects</span>
             </div>
             <div class="a-stat">
               <strong>ICECH ’26</strong>
@@ -282,7 +312,7 @@
           <div>
             <div class="sec-kicker"><span class="kicker-dash"></span> Portfolio</div>
             <h2 class="sec-title">My Featured <span class="text-blue">Projects</span></h2>
-            <p class="sec-sub">Filter by target track and click any project to inspect full architecture, real UI screenshots, and verified metrics.</p>
+            <p class="sec-sub">Filter by target track and click any project to inspect full architecture, Retina screenshots, and verified outcomes.</p>
           </div>
 
           <div class="filter-bar" role="tablist" aria-label="Filter projects by role track">
@@ -294,7 +324,7 @@
         </div>
 
         <div class="projects-grid" id="projectsGrid">
-          <!-- Rendered dynamically by app.js -->
+          <!-- Rendered dynamically by app.js with crisp product frames & SVG visuals -->
         </div>
       </div>
     </section>
@@ -308,7 +338,6 @@
         </div>
 
         <div class="journey-grid">
-          <!-- Left Column: Education & Experience -->
           <div class="journey-col reveal">
             <div class="journey-col-head">
               <span class="j-icon">
@@ -339,7 +368,6 @@
             </div>
           </div>
 
-          <!-- Right Column: Certifications & Core Skills -->
           <div class="journey-col reveal" style="--delay: 100ms">
             <div class="journey-col-head">
               <span class="j-icon">
@@ -382,21 +410,20 @@
       </div>
     </section>
 
-    <!-- ==================== PORTFOLIO PDF SHOWCASE ==================== -->
+    <!-- ==================== PORTFOLIO PDF SHOWCASE (RETINA 220 DPI) ==================== -->
     <section class="section" id="resumes">
       <div class="container">
         <div class="sec-head sec-head-wrap reveal">
           <div>
             <div class="sec-kicker"><span class="kicker-dash"></span> Portfolio Edition</div>
             <h2 class="sec-title">Visual <span class="text-blue">Portfolio PDF</span></h2>
-            <p class="sec-sub">Inspect all 5 pages directly in your browser or download the complete A4 PDF showcase covering all 6 flagship projects and published research.</p>
+            <p class="sec-sub">Inspect all 5 Retina-crisp pages directly in your browser or download the complete A4 PDF showcase covering all 6 flagship projects.</p>
           </div>
           <div class="doc-meta-pill">
-            <span class="live-dot"></span> 5 Pages &middot; A4 PDF &middot; Updated Nov 2026
+            <span class="live-dot"></span> 5 Pages &middot; A4 PDF &middot; Retina High-Res
           </div>
         </div>
 
-        <!-- Featured Wide Cobalt-Navy Bento Banner with Fanned 3-Page Portfolio Stack -->
         <div class="bento-portfolio spotlight-card reveal">
           <svg class="bento-waves" viewBox="0 0 1100 360" preserveAspectRatio="none" aria-hidden="true">
             <path d="M-40 280 C 260 170, 520 350, 820 210 C 980 140, 1080 200, 1180 150" stroke="white" stroke-opacity="0.1" stroke-width="1.5" fill="none"/>
@@ -429,7 +456,6 @@
             </div>
           </div>
 
-          <!-- Animated Fanned 3-Page Real Preview Stack -->
           <div class="bento-fan" data-preview-doc="portfolio" role="button" tabindex="0" aria-label="Preview 5-page Portfolio PDF">
             <div class="fan-sheet fan-left">
               <img src="assets/previews/portfolio-4.png" alt="Portfolio Page 4 preview" loading="lazy" />
@@ -444,7 +470,6 @@
           </div>
         </div>
 
-        <!-- Sleek 5-Page Visual Chapter Strip -->
         <div class="pdf-strip-grid reveal" style="--delay: 80ms">
           <button type="button" class="pdf-thumb-card spotlight-card" data-preview-doc="portfolio" data-preview-page="1">
             <div class="pdf-thumb-img"><img src="assets/previews/portfolio-1.png" alt="Page 1: Cover & Project Index" loading="lazy" /></div>
@@ -470,7 +495,7 @@
       </div>
     </section>
 
-    <!-- ==================== 2-COLUMN CONTACT SECTION (BEHANCE STYLE PRO) ==================== -->
+    <!-- ==================== 2-COLUMN CONTACT ==================== -->
     <section class="section section-soft" id="contact">
       <div class="container contact-grid">
         <div class="contact-info reveal">
@@ -566,7 +591,7 @@
     </div>
   </footer>
 
-  <!-- Interactive Case Study & Document Preview Lightbox Modal -->
+  <!-- Interactive Case Study & High-Res Document Lightbox Modal -->
   <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-sheet">
       <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
