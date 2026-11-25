@@ -703,17 +703,37 @@ body {
 
 .studio-card:hover { transform: translateY(-6px); box-shadow: 0 28px 60px rgba(15, 23, 42, 0.11); }
 
-.sc-media { position: relative; height: 226px; overflow: hidden; background: #e2e8f0; }
-.sc-media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.45s ease; }
+.featured-wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+  align-items: stretch;
+}
+
+.featured-wide .sc-media {
+  height: 100%;
+  min-height: 290px;
+}
+
+.featured-wide .sc-body {
+  padding: 28px 30px;
+  justify-content: center;
+}
+
+.sc-media { position: relative; height: 240px; overflow: hidden; background: #eef2f8; }
+.sc-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.45s ease; }
 .studio-card:hover .sc-media img { transform: scale(1.04); }
 
 .sc-tag {
   position: absolute; top: 14px; left: 14px;
   font-size: 10.5px; font-weight: 700;
   padding: 5px 11px; border-radius: 999px; color: #fff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 .tag-solar { background: var(--solar); }
 .tag-cobalt { background: var(--cobalt); }
+.tag-emerald { background: #059669; }
+.tag-indigo { background: #4f46e5; }
 
 .sc-poster {
   height: 226px; padding: 24px;
@@ -826,7 +846,8 @@ body {
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 960px) {
-  .hero-grid, .about-3col, .work-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid, .about-3col, .work-grid, .featured-wide { grid-template-columns: minmax(0, 1fr); }
+  .featured-wide .sc-media { min-height: 220px; }
   .about-left, .about-right { text-align: center; }
   .pc-row { justify-content: center; }
   .lanyard-stage { height: 470px; }
