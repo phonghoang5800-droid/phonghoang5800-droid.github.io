@@ -1,13 +1,9 @@
-# Nguyen Hoang Phong — Personal Portfolio
+# Nguyen Hoang Phong — Interactive Portfolio
 
-Live site: **https://phonghoang5800-droid.github.io**
+Live Site: **https://phonghoang5800-droid.github.io**
 
-Interactive web portfolio & downloadable 5-page PDF portfolio highlighting Business Analysis, Data Science, Explainable AI, FinTech Systems, and published IFRS S1/S2 research (ICECH 2026).
-
-## Featured Projects
-- **SocialShield-VN** — Explainable Vietnamese SMS & Phishing Warning System (`FastAPI`, `SQLite`, `TF-IDF + 22 Rules`, `XAI`)
-- **Hanoi Homes** — Apartment Price Estimation & Advisory Web System (`Python`, `CatBoost`, `SHAP`, `R Shiny`, `SQLite`, 463/463 tests)
-- **RideLink Chain** — Decentralized Ride-Hailing & Smart Escrow Prototype (`Node.js`, `Express`, `Solidity 0.8.20`, `Hardhat`)
-- **InterBank VerifyChain** — Secure Interbank Transaction Simulation (`Web Crypto OTP`, `SHA-256`, `RSA`, 19 QA cases)
-- **IFRS S1/S2 ESG Disclosure Intelligence** — HSBC Case Study & NLP Pipeline (`ICECH 2026`, `TF-IDF`, `BM25`, `Sentence Transformers`)
-- **Hybrid AI Customer Churn Prediction** — Orange Telecom CRM (`Soft Voting Ensemble`, `ROC-AUC 0.90`, `Accuracy 92.5%`)
+Interactive **Tokyo Acrylic × Solar Orange** portfolio featuring:
+- **60fps Elastic 3D Hanging Acrylic ID Pass** (physics drag-and-fling + 180° flip reveal)
+- **Live Cursor X-Ray Neural Lens** on the `ABOUT ME` editorial portrait
+- **Flagship AI & FinTech Work:** [SocialShield-VN 2.0](https://github.com/phonghoang5800-droid/socialshield-vn-2), [IFRS-ESG Disclosure Intelligence](https://github.com/phonghoang5800-droid/IFRS-ESG-Disclosure-Intelligence), [InterBank VerifyChain](https://github.com/phonghoang5800-droid/InterBank-VerifyChain-Secure-Transaction-Simulation), [Hanoi Homes](https://github.com/phonghoang5800-droid/hanoi-home), and **5-Page Visual Portfolio PDF**
+- **Built-in Recruiter AI Copilot** (`Hỏi AI về Phong`) & Light/Dark studio theme toggle
