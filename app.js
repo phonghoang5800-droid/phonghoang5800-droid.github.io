@@ -27,10 +27,10 @@ document.getElementById("themeToggle")?.addEventListener("click", () => {
 (function initTypewriter() {
   const el = document.getElementById("typewriterText");
   const roles = [
-    "AI Engineer Trainee",
-    "LLM Agents & Hybrid RAG",
-    "Vietnamese NLP & VLM Vision",
-    "FinTech · VNU-IS (GPA 3.45)",
+    "FinTech & Digital Business",
+    "Business & Data Analysis",
+    "Applied Machine Learning",
+    "VNU-IS · GPA 3.45 / 4.0",
   ];
   let i = 0, c = roles[0].length, del = true;
   function tick() {
@@ -149,10 +149,10 @@ document.getElementById("themeToggle")?.addEventListener("click", () => {
   const msgs = document.getElementById("aiMessages");
 
   const QA = {
-    momo: "Phong khớp trực tiếp JD <strong>AI Engineering Trainee (MoMo)</strong>: đã xây dựng <strong>SocialShield-VN 2.0</strong> (Hybrid BM25+Vector RAG, VLM soi bill giả, chống hallucination tổng đài MoMo 1900 5454 41) đạt <strong>100% Accuracy & 0% FPR</strong> trên 28 ca unseen.",
-    project: "Dự án nổi bật nhất là <strong>SocialShield-VN 2.0</strong> (Multimodal Agentic Anti-Scam Copilot — FastAPI + Hybrid RAG + VLM + Benchmark v1 vs v2), cùng <strong>IFRS-ESG NLP</strong> và <strong>InterBank VerifyChain</strong>.",
-    stats: "Sinh viên năm cuối <strong>Financial Technology & Digital Business @ VNU-IS</strong>, <strong>GPA 3.45/4.0</strong>, <strong>Aptis B2</strong>, và là <strong>đồng tác giả bài báo quốc tế ICECH 2026</strong>.",
-    contact: "Liên hệ nhanh qua email <strong>phonghoang5800@gmail.com</strong> hoặc <strong>github.com/phonghoang5800-droid</strong> — sẵn sàng full-time tại Hà Nội!",
+    major: "Phong học ngành <strong>Công nghệ Tài chính &amp; Kinh doanh số (FDB2023B — VNU-IS)</strong>, hoàn thành các học phần nền tảng về <strong>Tài chính doanh nghiệp, Quản trị rủi ro, Kinh tế lượng, Cơ sở dữ liệu, Cấu trúc dữ liệu &amp; giải thuật, Khoa học dữ liệu, Học máy, Trí tuệ nhân tạo, An toàn thông tin &amp; Blockchain</strong>.",
+    project: "Các dự án thực tế gồm <strong>SocialShield-VN 2.0</strong> (chống lừa đảo tài chính), <strong>IFRS-ESG Disclosure Intelligence</strong> (nghiên cứu ICECH 2026), <strong>InterBank VerifyChain</strong> (xác thực giao dịch), <strong>Hanoi Homes</strong> (định giá BĐS CatBoost + SHAP) và <strong>RideLink Chain</strong> (ký quỹ thông minh Solidity).",
+    stats: "<strong>GPA 3.45/4.0</strong> tại VNU-IS, chứng chỉ tiếng Anh <strong>Aptis B2</strong>, chứng chỉ Google Data Analysis / BI / AI, và là <strong>đồng tác giả bài báo quốc tế ICECH 2026</strong> (chủ đề IFRS S1/S2 ESG).",
+    contact: "Liên hệ trực tiếp qua email <strong>phonghoang5800@gmail.com</strong> hoặc <strong>github.com/phonghoang5800-droid</strong> — sẵn sàng thực tập / làm việc tại Hà Nội!",
   };
 
   btn?.addEventListener("click", () => drawer.classList.toggle("hidden"));
