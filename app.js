@@ -23,31 +23,19 @@ document.getElementById("themeToggle")?.addEventListener("click", () => {
   document.documentElement.dataset.theme = next;
 });
 
-/* 3. TYPEWRITER */
+/* 3. CLEAN TYPEWRITER (SINGLE FOCUS: FINANCIAL TECHNOLOGY AND DIGITAL BUSINESS) */
 (function initTypewriter() {
   const el = document.getElementById("typewriterText");
-  const roles = [
-    "FinTech & Digital Business",
-    "Business & Data Analysis",
-    "Applied Machine Learning",
-    "VNU-IS · GPA 3.45 / 4.0",
-  ];
-  let i = 0, c = roles[0].length, del = true;
-  function tick() {
-    const w = roles[i];
-    if (!del) {
-      c++;
-      el.textContent = w.slice(0, c);
-      if (c === w.length) { del = true; setTimeout(tick, 1450); return; }
-      setTimeout(tick, 55);
-    } else {
-      c--;
-      el.textContent = w.slice(0, c);
-      if (c === 0) { del = false; i = (i + 1) % roles.length; setTimeout(tick, 220); return; }
-      setTimeout(tick, 32);
-    }
+  if (!el) return;
+  const text = "Financial Technology and Digital Business";
+  el.textContent = "";
+  let i = 0;
+  function typeOnce() {
+    i++;
+    el.textContent = text.slice(0, i);
+    if (i < text.length) setTimeout(typeOnce, 38);
   }
-  setTimeout(tick, 1700);
+  setTimeout(typeOnce, 720);
 })();
 
 /* 4. 60FPS ELASTIC PARACORD LANYARD + 180° FLIPPABLE ACRYLIC BADGE */
@@ -149,7 +137,7 @@ document.getElementById("themeToggle")?.addEventListener("click", () => {
   const msgs = document.getElementById("aiMessages");
 
   const QA = {
-    major: "Phong học ngành <strong>Công nghệ Tài chính &amp; Kinh doanh số (FDB2023B — VNU-IS)</strong>, hoàn thành các học phần nền tảng về <strong>Tài chính doanh nghiệp, Quản trị rủi ro, Kinh tế lượng, Cơ sở dữ liệu, Cấu trúc dữ liệu &amp; giải thuật, Khoa học dữ liệu, Học máy, Trí tuệ nhân tạo, An toàn thông tin &amp; Blockchain</strong>.",
+    major: "Phong học ngành <strong>Financial Technology &amp; Digital Business (VNU-IS)</strong>. Thay vì chỉ dừng ở lý thuyết trên lớp, Phong tập trung áp dụng tư duy tài chính, phân tích dữ liệu và thiết kế hệ thống để giải các bài toán thực tế như phát hiện lừa đảo, định giá BĐS, kiểm toán giao dịch và tuân thủ ESG.",
     project: "Các dự án thực tế gồm <strong>SocialShield-VN 2.0</strong> (chống lừa đảo tài chính), <strong>IFRS-ESG Disclosure Intelligence</strong> (nghiên cứu ICECH 2026), <strong>InterBank VerifyChain</strong> (xác thực giao dịch), <strong>Hanoi Homes</strong> (định giá BĐS CatBoost + SHAP) và <strong>RideLink Chain</strong> (ký quỹ thông minh Solidity).",
     stats: "<strong>GPA 3.45/4.0</strong> tại VNU-IS, chứng chỉ tiếng Anh <strong>Aptis B2</strong>, chứng chỉ Google Data Analysis / BI / AI, và là <strong>đồng tác giả bài báo quốc tế ICECH 2026</strong> (chủ đề IFRS S1/S2 ESG).",
     contact: "Liên hệ trực tiếp qua email <strong>phonghoang5800@gmail.com</strong> hoặc <strong>github.com/phonghoang5800-droid</strong> — sẵn sàng thực tập / làm việc tại Hà Nội!",
