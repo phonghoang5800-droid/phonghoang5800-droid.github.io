@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Portfolio — Nguyen Hoang Phong</title>
+  <title>PHONG. — Selected Works Portfolio (Issue 01 · 2026)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     @page {
       size: A4 portrait;
@@ -13,37 +13,35 @@
     }
 
     :root {
-      --bg: #ffffff;
-      --pearl: #f4f6fb;
-      --border: #e2e8f0;
-      --ink: #0f172a;
-      --muted: #526078;
+      --paper: #f6f3ec;
+      --paper-deep: #ece7dc;
+      --ink: #0e0e0d;
+      --muted: #57534e;
+      --rule: #c8c1b4;
+      --rule-dark: #0e0e0d;
+      --vermilion: #d9381e;
       --cobalt: #1d4ed8;
-      --cobalt-soft: #eff6ff;
-      --solar: #ff4f00;
-      --solar-soft: #fff3ed;
-      --mint: #059669;
-      --mint-soft: #ecfdf5;
     }
 
     * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
     body {
       margin: 0;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #1c1917;
       color: var(--ink);
-      background: #e5e7eb;
-      line-height: 1.45;
+      font-family: "Space Grotesk", -apple-system, sans-serif;
+      line-height: 1.42;
     }
 
+    .serif { font-family: "Instrument Serif", Georgia, serif; }
     .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
 
     .page {
       width: 210mm;
       height: 297mm;
-      background: var(--bg);
+      background: var(--paper);
       margin: 0 auto;
-      padding: 15mm 16mm 13mm;
+      padding: 13mm 15mm 12mm;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -53,809 +51,891 @@
 
     .page:last-child { page-break-after: auto; }
 
-    /* Top accent bar */
-    .top-rule {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #1d4ed8 0%, #5b3df5 52%, #ff4f00 100%);
-    }
-
-    .page-header {
+    /* Architectural running header & footer */
+    .run-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 14px;
-      font-size: 9.5px;
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--muted);
-      letter-spacing: 0.08em;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--rule-dark);
+      margin-bottom: 10px;
     }
 
-    .page-footer {
+    .run-foot {
       margin-top: auto;
-      padding-top: 8px;
-      border-top: 1px solid var(--border);
+      padding-top: 7px;
+      border-top: 1px solid var(--rule-dark);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 9px;
+      font-size: 8.5px;
+      letter-spacing: 0.1em;
       color: var(--muted);
     }
 
-    .page-footer a { color: var(--cobalt); text-decoration: none; font-weight: 600; }
+    .run-foot a { color: var(--ink); text-decoration: none; font-weight: 600; }
 
-    /* PAGE 1: COVER & PROFILE */
-    .cover-hero {
-      display: grid;
-      grid-template-columns: 1fr 46mm;
-      gap: 14mm;
-      align-items: center;
-      background: var(--pearl);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px 18px;
-      margin-bottom: 14px;
+    /* ===================================================== */
+    /* PAGE 1: ICONIC EDITORIAL MAGAZINE COVER               */
+    /* ===================================================== */
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid var(--rule-dark);
+      padding: 2px 0 6px;
+      margin-bottom: 12px;
     }
 
-    .eyebrow {
-      font-size: 9.5px;
+    .masthead-word {
+      margin: 0;
+      font-size: 82px;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--cobalt);
+      letter-spacing: -0.055em;
+      line-height: 0.88;
+      color: var(--ink);
+    }
+
+    .masthead-word span { color: var(--vermilion); }
+
+    .masthead-meta {
+      text-align: right;
+      font-size: 9px;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .masthead-meta strong { color: var(--ink); display: block; font-size: 10px; }
+
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 78mm 1fr;
+      gap: 11mm;
+      align-items: stretch;
+      margin-bottom: 12px;
+    }
+
+    .cover-photo-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .photo-frame {
+      width: 100%;
+      height: 102mm;
+      border: 1.5px solid var(--rule-dark);
+      overflow: hidden;
+      background: var(--paper-deep);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .photo-caption {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0 0;
+      font-size: 8.5px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .cover-editorial-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cover-statement {
+      margin: 0 0 8px;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.04;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+
+    .cover-statement em {
+      color: var(--vermilion);
+      font-style: italic;
+    }
+
+    .cover-sub {
+      margin: 0 0 12px;
+      font-size: 10.8px;
+      color: var(--muted);
+      line-height: 1.52;
+    }
+
+    /* Editorial Table of Contents */
+    .toc-title {
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--vermilion);
+      font-weight: 600;
       margin-bottom: 6px;
     }
 
-    .cover-name {
-      margin: 0;
-      font-size: 27px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.08;
+    .toc-list {
+      border-top: 1px solid var(--rule-dark);
+      margin-bottom: 10px;
     }
 
-    .cover-major {
-      margin: 6px 0 10px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--solar);
+    .toc-row {
+      display: grid;
+      grid-template-columns: 20px 1fr auto;
+      gap: 8px;
+      align-items: baseline;
+      padding: 5.5px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 10.5px;
     }
 
-    .cover-bio {
-      margin: 0 0 12px;
-      font-size: 11px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
+    .toc-num { color: var(--vermilion); font-size: 9px; font-weight: 600; }
+    .toc-name { font-weight: 600; color: var(--ink); }
+    .toc-pg { font-size: 9px; color: var(--muted); }
 
-    .link-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .link-pill {
-      text-decoration: none;
-      font-size: 9.5px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
-      color: var(--ink);
-    }
-
-    .link-pill.primary {
-      background: var(--cobalt);
-      border-color: var(--cobalt);
-      color: #ffffff;
-    }
-
-    .portrait-box {
-      width: 46mm;
-      height: 56mm;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 2px solid #ffffff;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-    }
-
-    .portrait-box img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center top;
-      display: block;
-    }
-
-    .kpi-row {
+    /* Key Figures Strip — pure typographic rules, zero boxes */
+    .figures-strip {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 9px;
-      margin-bottom: 14px;
+      border-top: 1.5px solid var(--rule-dark);
+      border-bottom: 1.5px solid var(--rule-dark);
+      margin-bottom: 12px;
     }
 
-    .kpi {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 12px;
+    .fig-cell {
+      padding: 9px 10px 9px 0;
+      border-right: 1px solid var(--rule);
+      padding-left: 10px;
+    }
+    .fig-cell:first-child { padding-left: 0; }
+    .fig-cell:last-child { border-right: none; }
+
+    .fig-val {
+      font-size: 24px;
+      line-height: 1;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .fig-val.accent { color: var(--vermilion); }
+    .fig-lbl { font-size: 8.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+    /* Bottom Profile Ledger (2 columns separated by hairline) */
+    .ledger-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 10mm;
     }
 
-    .kpi-v { font-size: 17px; font-weight: 800; color: var(--ink); line-height: 1.15; }
-    .kpi-v.cobalt { color: var(--cobalt); }
-    .kpi-v.solar { color: var(--solar); }
-    .kpi-v.mint { color: var(--mint); }
-    .kpi-l { font-size: 9.5px; font-weight: 600; color: var(--muted); margin-top: 2px; }
-
-    .sec-label {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
+    .ledger-sec-head {
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--cobalt);
+      color: var(--ink);
+      font-weight: 700;
+      border-bottom: 1px solid var(--rule-dark);
+      padding-bottom: 4px;
       margin: 0 0 8px;
     }
 
-    .tracks-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 9px;
-      margin-bottom: 14px;
+    .ledger-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 4.5px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 10px;
     }
+    .ledger-row:last-child { border-bottom: none; }
+    .lr-main strong { display: block; font-size: 10.5px; color: var(--ink); }
+    .lr-main span { font-size: 9.5px; color: var(--muted); }
+    .lr-date { font-size: 8.5px; color: var(--muted); white-space: nowrap; }
 
-    .track-card {
-      background: var(--pearl);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 11px 12px;
-    }
-
-    .track-num { font-size: 10px; font-weight: 700; color: var(--solar); margin-bottom: 4px; }
-    .track-card h4 { margin: 0 0 4px; font-size: 11.5px; font-weight: 800; }
-    .track-card p { margin: 0; font-size: 10px; color: var(--muted); line-height: 1.45; }
-
-    .info-2col {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+    .inline-links {
+      display: flex;
       gap: 12px;
-    }
-
-    .info-box {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px 14px;
-      background: #ffffff;
-    }
-
-    .info-item { margin-bottom: 9px; }
-    .info-item:last-child { margin-bottom: 0; }
-    .info-item-head { display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; }
-    .info-item-sub { font-size: 10px; color: var(--muted); margin-top: 1px; }
-
-    .skill-group { margin-bottom: 8px; }
-    .skill-group:last-child { margin-bottom: 0; }
-    .skill-cat { font-size: 9.5px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 4px; }
-    .chip {
+      flex-wrap: wrap;
       font-size: 9px;
-      font-weight: 600;
-      padding: 3px 7px;
-      border-radius: 6px;
-      background: var(--pearl);
-      border: 1px solid var(--border);
+      padding-top: 6px;
+    }
+    .inline-links a {
       color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--vermilion);
+      padding-bottom: 1px;
+      font-weight: 600;
     }
 
-    /* PROJECT SHOWCASE CARDS (PAGES 2, 3, 4) */
-    .project-block {
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      overflow: hidden;
-      background: #ffffff;
-      margin-bottom: 13px;
+    /* ===================================================== */
+    /* PAGES 2, 3, 4: ASYMMETRIC MAGAZINE CASE SPREADS       */
+    /* ===================================================== */
+    .case-spread {
+      display: grid;
+      grid-template-columns: 104mm 1fr;
+      gap: 9mm;
+      align-items: start;
+      padding: 10px 0 14px;
+      border-bottom: 1.5px solid var(--rule-dark);
+    }
+
+    .case-spread.flip {
+      grid-template-columns: 1fr 104mm;
+    }
+
+    .case-spread.no-border {
+      border-bottom: none;
+      padding-bottom: 8px;
+    }
+
+    .figure-wrap {
       display: flex;
       flex-direction: column;
     }
 
-    .proj-top {
-      display: grid;
-      grid-template-columns: 94mm 1fr;
-      gap: 12px;
-      padding: 12px;
-      align-items: center;
-    }
-
-    .proj-img-frame {
-      width: 94mm;
+    .art-frame {
+      width: 100%;
       aspect-ratio: 16 / 9;
-      border-radius: 10px;
+      border: 1.5px solid var(--rule-dark);
+      background: #ffffff;
       overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--pearl);
     }
 
-    .proj-img-frame img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
+    .art-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       display: block;
     }
 
-    .proj-meta {
+    .art-cap {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 6px;
-      margin-bottom: 5px;
-    }
-
-    .proj-num {
-      font-size: 9.5px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: var(--cobalt-soft);
-      color: var(--cobalt);
-    }
-
-    .proj-num.solar { background: var(--solar-soft); color: var(--solar); }
-    .proj-num.mint { background: var(--mint-soft); color: var(--mint); }
-
-    .proj-link {
-      font-size: 9.5px;
-      font-weight: 700;
-      color: var(--cobalt);
-      text-decoration: none;
-    }
-
-    .proj-title {
-      margin: 0 0 3px;
-      font-size: 14.5px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .proj-role {
-      font-size: 10px;
-      font-weight: 600;
+      align-items: center;
+      padding-top: 5px;
+      font-size: 8px;
+      letter-spacing: 0.08em;
       color: var(--muted);
+    }
+
+    .art-cap a {
+      color: var(--vermilion);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .case-copy {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-top-line {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .big-idx {
+      font-size: 46px;
+      line-height: 0.85;
+      color: var(--vermilion);
+    }
+
+    .case-kicker {
+      font-size: 8.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .case-title {
+      margin: 2px 0 6px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    .case-lead {
+      margin: 0 0 10px;
+      font-size: 10.3px;
+      color: #292524;
+      line-height: 1.5;
+    }
+
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--rule-dark);
+      border-bottom: 1px solid var(--rule);
       margin-bottom: 8px;
     }
 
-    .proj-points {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      font-size: 10.2px;
-      color: #334155;
+    .cm-item {
+      padding: 6px 8px 6px 0;
+    }
+    .cm-item:nth-child(even) {
+      padding-left: 10px;
+      border-left: 1px solid var(--rule);
+    }
+    .cm-num { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.1; }
+    .cm-lbl { font-size: 8px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+
+    .case-stack {
+      font-size: 8.5px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
     }
 
-    .proj-points div strong { color: var(--ink); }
-
-    .proj-strip {
-      background: var(--pearl);
-      border-top: 1px solid var(--border);
-      padding: 8px 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
+    /* Editorial Pull-Quote Divider Band */
+    .editorial-note {
+      margin-top: 12px;
+      padding: 12px 0;
+      border-top: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 34mm 1fr;
+      gap: 8mm;
+      align-items: baseline;
     }
 
-    .metric-badges { display: flex; gap: 6px; flex-wrap: wrap; }
-    .m-badge {
-      font-size: 9px;
+    .en-tag {
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      color: var(--vermilion);
       font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
+    }
+
+    .en-quote {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
       color: var(--ink);
     }
-    .m-badge.accent { border-color: #93c5fd; background: var(--cobalt-soft); color: var(--cobalt); }
-    .m-badge.good { border-color: #6ee7b7; background: var(--mint-soft); color: var(--mint); }
 
-    .stack-line { font-size: 9px; color: var(--muted); font-weight: 600; }
-
-    /* Summary Table on Page 4 */
-    .summary-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 10px;
-      margin-top: 4px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
+    /* ===================================================== */
+    /* PAGE 4: OBSIDIAN INK BACK-COVER COLOPHON              */
+    /* ===================================================== */
+    .back-colophon {
+      margin-top: 10px;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 18px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
     }
 
-    .summary-table th, .summary-table td {
-      padding: 8px 10px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .summary-table th {
-      background: var(--pearl);
-      font-size: 9px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .summary-table tr:last-child td { border-bottom: none; }
-
-    .cta-box {
-      margin-top: 14px;
-      background: linear-gradient(125deg, #0f172a 0%, #1e293b 100%);
-      color: #ffffff;
-      border-radius: 14px;
-      padding: 16px 18px;
+    .col-head {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 14px;
+      align-items: baseline;
+      border-bottom: 1px solid rgba(246, 243, 236, 0.22);
+      padding-bottom: 8px;
     }
 
-    .cta-box h3 { margin: 0 0 4px; font-size: 15px; font-weight: 800; }
-    .cta-box p { margin: 0; font-size: 10.5px; color: #cbd5e1; }
-    .cta-links { display: flex; flex-direction: column; gap: 5px; text-align: right; font-size: 10px; }
-    .cta-links a { color: #93c5fd; text-decoration: none; font-weight: 600; }
+    .col-title {
+      margin: 0;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .col-title em { color: #ff6b4a; font-style: italic; }
+
+    .col-index {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.5px;
+    }
+
+    .col-index th, .col-index td {
+      padding: 6.5px 6px;
+      text-align: left;
+      border-bottom: 1px solid rgba(246, 243, 236, 0.15);
+    }
+
+    .col-index th {
+      font-size: 8px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a8a29e;
+    }
+
+    .col-index td strong { color: #ffffff; }
+    .col-index td.acc { color: #ff6b4a; font-weight: 600; }
+
+    .col-contact {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid rgba(246, 243, 236, 0.24);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .col-links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 9.5px;
+    }
+
+    .col-links a {
+      color: var(--paper);
+      text-decoration: none;
+    }
+
+    .col-stamp {
+      text-align: right;
+      font-size: 8.5px;
+      letter-spacing: 0.1em;
+      color: #a8a29e;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
+
   <!-- ========================================================= -->
-  <!-- PAGE 1: EXECUTIVE COVER & PROFILE                         -->
+  <!-- PAGE 1: MAGAZINE COVER & EXECUTIVE INDEX                  -->
   <!-- ========================================================= -->
   <section class="page">
-    <div class="top-rule"></div>
-    <div class="page-header mono">
-      <span>NGUYEN HOANG PHONG // SELECTED WORKS PORTFOLIO</span>
+    <div class="run-head mono">
+      <span>SELECTED WORKS · EDITION 2026</span>
+      <span>FINANCIAL TECHNOLOGY &amp; DIGITAL BUSINESS</span>
+      <span>HANOI, VN</span>
+    </div>
+
+    <div class="masthead">
+      <h1 class="masthead-word">PHONG<span>.</span></h1>
+      <div class="masthead-meta mono">
+        <strong>NGUYEN HOANG PHONG</strong>
+        VNU INTERNATIONAL SCHOOL<br />
+        ISSUE NO. 01 · 4 PAGES
+      </div>
+    </div>
+
+    <div class="cover-grid">
+      <div class="cover-photo-col">
+        <div class="photo-frame">
+          <img src="assets/images/portrait.jpg" alt="Nguyen Hoang Phong" />
+        </div>
+        <div class="photo-caption mono">
+          <span>FIG. 00 — PORTRAIT</span>
+          <span>FDB2023B</span>
+        </div>
+      </div>
+
+      <div class="cover-editorial-col">
+        <div>
+          <h2 class="cover-statement serif">
+            Turning finance &amp; data into <em>working</em> digital products.
+          </h2>
+          <p class="cover-sub">
+            Final-year <strong>Financial Technology &amp; Digital Business</strong> student at VNU-IS (GPA 3.45/4.0). Focused on applying business analysis, risk modeling, and practical web engineering to real Vietnamese FinTech problems.
+          </p>
+        </div>
+
+        <div>
+          <div class="toc-title mono">INDEX OF WORKS</div>
+          <div class="toc-list">
+            <div class="toc-row"><span class="toc-num mono">01</span><span class="toc-name">SocialShield-VN 2.0 — Anti-Scam Assistant</span><span class="toc-pg mono">P.02</span></div>
+            <div class="toc-row"><span class="toc-num mono">02</span><span class="toc-name">IFRS-ESG Intelligence (ICECH 2026)</span><span class="toc-pg mono">P.02</span></div>
+            <div class="toc-row"><span class="toc-num mono">03</span><span class="toc-name">Hanoi Homes — Explainable Pricing App</span><span class="toc-pg mono">P.03</span></div>
+            <div class="toc-row"><span class="toc-num mono">04</span><span class="toc-name">InterBank VerifyChain — Live Settlement Sim</span><span class="toc-pg mono">P.03</span></div>
+            <div class="toc-row"><span class="toc-num mono">05</span><span class="toc-name">RideLink Chain — Smart Escrow Prototype</span><span class="toc-pg mono">P.04</span></div>
+          </div>
+
+          <div class="inline-links mono">
+            <a href="https://phonghoang5800-droid.github.io">WEB PORTFOLIO ↗</a>
+            <a href="https://github.com/phonghoang5800-droid">GITHUB ↗</a>
+            <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411">LINKEDIN ↗</a>
+            <a href="mailto:phonghoang5800@gmail.com">EMAIL ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="figures-strip">
+      <div class="fig-cell">
+        <div class="fig-val serif">3.45<span style="font-size:14px;color:var(--muted);">/4.0</span></div>
+        <div class="fig-lbl mono">VNU-IS GPA</div>
+      </div>
+      <div class="fig-cell">
+        <div class="fig-val serif accent">ICECH ’26</div>
+        <div class="fig-lbl mono">Published Co-Author</div>
+      </div>
+      <div class="fig-cell">
+        <div class="fig-val serif">05</div>
+        <div class="fig-lbl mono">Shipped Projects</div>
+      </div>
+      <div class="fig-cell">
+        <div class="fig-val serif">Aptis B2</div>
+        <div class="fig-lbl mono">English Proficiency</div>
+      </div>
+    </div>
+
+    <div class="ledger-grid">
+      <div>
+        <h3 class="ledger-sec-head mono">BACKGROUND &amp; RECOGNITION</h3>
+        <div class="ledger-row">
+          <div class="lr-main"><strong>VNU International School – VNU Hanoi</strong><span>Financial Technology &amp; Digital Business</span></div>
+          <div class="lr-date mono">2023–2027</div>
+        </div>
+        <div class="ledger-row">
+          <div class="lr-main"><strong>Ula Edu — Brand Management Trainee</strong><span>Marketing campaign support &amp; operations</span></div>
+          <div class="lr-date mono">3 MOS</div>
+        </div>
+        <div class="ledger-row">
+          <div class="lr-main"><strong>ICECH 2026 International Conference</strong><span>Co-Author · HSBC IFRS S1/S2 Case Study</span></div>
+          <div class="lr-date mono">2026</div>
+        </div>
+        <div class="ledger-row">
+          <div class="lr-main"><strong>Google Professional Certificates</strong><span>Data Analysis (Python) · BI · AI Foundations</span></div>
+          <div class="lr-date mono">CERT</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="ledger-sec-head mono">PRACTICAL FOCUS &amp; STACK</h3>
+        <div class="ledger-row">
+          <div class="lr-main"><strong>01 / Business &amp; FinTech Analysis</strong><span>URD, API specs, process flows, QA testing, IFRS</span></div>
+          <div class="lr-date mono">BA</div>
+        </div>
+        <div class="ledger-row">
+          <div class="lr-main"><strong>02 / Data, Risk &amp; Valuation</strong><span>Python, SQL, CatBoost, SHAP, BM25, Econometrics</span></div>
+          <div class="lr-date mono">DATA</div>
+        </div>
+        <div class="ledger-row">
+          <div class="lr-main"><strong>03 / Web &amp; Product Prototyping</strong><span>FastAPI, HTML/CSS/JS, R Shiny, Node.js, Solidity</span></div>
+          <div class="lr-date mono">BUILD</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="run-foot mono">
+      <span>NGUYEN HOANG PHONG · PORTFOLIO</span>
+      <a href="https://phonghoang5800-droid.github.io">PHONGHOANG5800-DROID.GITHUB.IO</a>
       <span>01 / 04</span>
     </div>
-
-    <div class="cover-hero">
-      <div>
-        <div class="eyebrow mono">VNU INTERNATIONAL SCHOOL · HANOI</div>
-        <h1 class="cover-name">Nguyen Hoang Phong</h1>
-        <div class="cover-major">Financial Technology and Digital Business</div>
-        <p class="cover-bio">
-          Final-year undergraduate applying finance, risk analysis, information systems, and practical data tools to build real, testable digital products—from fraud prevention and ESG compliance to real estate valuation and secure payments.
-        </p>
-        <div class="link-pills">
-          <a href="https://phonghoang5800-droid.github.io" class="link-pill primary">phonghoang5800-droid.github.io ↗</a>
-          <a href="https://github.com/phonghoang5800-droid" class="link-pill">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411" class="link-pill">LinkedIn ↗</a>
-          <a href="mailto:phonghoang5800@gmail.com" class="link-pill">phonghoang5800@gmail.com</a>
-        </div>
-      </div>
-
-      <div class="portrait-box">
-        <img src="assets/images/portrait.jpg" alt="Nguyen Hoang Phong" />
-      </div>
-    </div>
-
-    <div class="kpi-row">
-      <div class="kpi">
-        <div class="kpi-v cobalt mono">3.45 / 4.0</div>
-        <div class="kpi-l">Cumulative GPA (VNU-IS)</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-v solar mono">ICECH 2026</div>
-        <div class="kpi-l">Published Co-Author (IFRS)</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-v mint mono">5 Projects</div>
-        <div class="kpi-l">Open-Source &amp; Tested Apps</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-v mono">Aptis B2</div>
-        <div class="kpi-l">English Proficiency</div>
-      </div>
-    </div>
-
-    <h3 class="sec-label">How I Apply My Background</h3>
-    <div class="tracks-3">
-      <div class="track-card">
-        <div class="track-num mono">01 // BA &amp; FINTECH</div>
-        <h4>Business &amp; Product Analysis</h4>
-        <p>Translate messy business flows into clean URD/API specs, QA test cases, and user-ready digital journeys.</p>
-      </div>
-      <div class="track-card">
-        <div class="track-num mono">02 // DATA &amp; RISK</div>
-        <h4>Data, Valuation &amp; Risk</h4>
-        <p>Clean raw datasets, build interpretable models (CatBoost, SHAP, Logistic Regression), and audit outputs.</p>
-      </div>
-      <div class="track-card">
-        <div class="track-num mono">03 // SYSTEMS</div>
-        <h4>End-to-End Web Prototypes</h4>
-        <p>Ship working full-stack prototypes with Python, FastAPI, SQLite, R Shiny, and clean interactive web UIs.</p>
-      </div>
-    </div>
-
-    <div class="info-2col">
-      <div class="info-box">
-        <h3 class="sec-label">Education, Experience &amp; Recognition</h3>
-
-        <div class="info-item">
-          <div class="info-item-head">
-            <span>VNU International School – VNU Hanoi</span>
-            <span class="mono" style="color:var(--muted);font-size:9.5px;">2023 – 2027</span>
-          </div>
-          <div class="info-item-sub">B.S. in Financial Technology &amp; Digital Business · GPA 3.45/4.0</div>
-        </div>
-
-        <div class="info-item">
-          <div class="info-item-head">
-            <span>Ula Edu — Brand Management Trainee (Intern)</span>
-            <span class="mono" style="color:var(--muted);font-size:9.5px;">3 Months</span>
-          </div>
-          <div class="info-item-sub">Supported campaign coordination, market tracking, and cross-team content operations.</div>
-        </div>
-
-        <div class="info-item">
-          <div class="info-item-head">
-            <span>ICECH 2026 International Conference</span>
-            <span class="mono" style="color:var(--solar);font-size:9.5px;">Published</span>
-          </div>
-          <div class="info-item-sub">Co-Author: <em>HSBC Case Study on Sustainability Disclosure under IFRS S1/S2</em>.</div>
-        </div>
-
-        <div class="info-item">
-          <div class="info-item-head">
-            <span>Professional Certificates</span>
-            <span class="mono" style="color:var(--muted);font-size:9.5px;">Google / British Council</span>
-          </div>
-          <div class="info-item-sub">Google Data Analysis with Python · Google Business Intelligence · Google AI · Aptis B2.</div>
-        </div>
-      </div>
-
-      <div class="info-box">
-        <h3 class="sec-label">Core Toolkit</h3>
-
-        <div class="skill-group">
-          <div class="skill-cat">Business, Finance &amp; Risk</div>
-          <div class="chips">
-            <span class="chip">URD &amp; API Specs</span>
-            <span class="chip">Process Mapping</span>
-            <span class="chip">QA Testing</span>
-            <span class="chip">Corporate Finance</span>
-            <span class="chip">Risk &amp; Fraud Rules</span>
-            <span class="chip">IFRS S1/S2 ESG</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-cat">Data &amp; Quantitative Modeling</div>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">SQL / SQLite</span>
-            <span class="chip">pandas &amp; NumPy</span>
-            <span class="chip">Scikit-learn</span>
-            <span class="chip">CatBoost &amp; SHAP</span>
-            <span class="chip">BM25 &amp; TF-IDF</span>
-            <span class="chip">Econometrics</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-cat">Web &amp; Systems Delivery</div>
-          <div class="chips">
-            <span class="chip">FastAPI</span>
-            <span class="chip">HTML / CSS / JS</span>
-            <span class="chip">R Shiny</span>
-            <span class="chip">Node.js</span>
-            <span class="chip">Solidity 0.8.20</span>
-            <span class="chip">Git &amp; Docker</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-footer mono">
-      <span>Nguyen Hoang Phong · Hanoi, Vietnam</span>
-      <a href="https://phonghoang5800-droid.github.io">https://phonghoang5800-droid.github.io</a>
-    </div>
   </section>
 
   <!-- ========================================================= -->
-  <!-- PAGE 2: SOCIALSHIELD-VN 2.0 & IFRS-ESG (ICECH 2026)       -->
+  <!-- PAGE 2: SPREAD — CASE 01 & CASE 02                        -->
   <!-- ========================================================= -->
   <section class="page">
-    <div class="top-rule"></div>
-    <div class="page-header mono">
-      <span>FINTECH RISK &amp; ESG COMPLIANCE PROJECTS</span>
-      <span>02 / 04</span>
+    <div class="run-head mono">
+      <span>CHAPTER I · FINTECH RISK &amp; ESG COMPLIANCE</span>
+      <span>CASES 01 — 02</span>
     </div>
 
-    <!-- PROJECT 01: SocialShield-VN 2.0 -->
-    <article class="project-block">
-      <div class="proj-top">
-        <div class="proj-img-frame">
-          <img src="assets/previews/socialshield-v2.png" alt="SocialShield-VN 2.0 Web UI" />
+    <!-- CASE 01 (Image Left, Editorial Right) -->
+    <article class="case-spread">
+      <div class="figure-wrap">
+        <div class="art-frame">
+          <img src="assets/previews/socialshield-v2.png" alt="SocialShield-VN 2.0" />
         </div>
-        <div>
-          <div class="proj-meta">
-            <span class="proj-num solar mono">PROJECT 01 · FINTECH SECURITY</span>
-            <a href="https://github.com/phonghoang5800-droid/socialshield-vn-2" class="proj-link mono">GitHub Repo ↗</a>
-          </div>
-          <h2 class="proj-title">SocialShield-VN 2.0 — Anti-Scam Assistant</h2>
-          <div class="proj-role">Lead Builder · Risk Modeling, Backend API &amp; Interactive Web UI</div>
-          <div class="proj-points">
-            <div><strong>Problem:</strong> Vietnamese users face rising bank, e-wallet (MoMo/VCB), and job-task SMS/link scams with obfuscated text and fake transfer bills.</div>
-            <div><strong>Solution:</strong> Combined 22 Vietnamese fraud rules + TF-IDF Logistic Regression (v1) with official domain verification, hybrid playbook retrieval (14 verified VN hotlines), and screenshot inspection via FastAPI.</div>
-            <div><strong>Outcome:</strong> Reached 100% accuracy and 0% false positives on legitimate OTPs across 28 unseen test traps—fixing no-URL task scams missed by v1.</div>
-          </div>
+        <div class="art-cap mono">
+          <span>FIG 01.A — LIVE WEB INTERFACE</span>
+          <a href="https://github.com/phonghoang5800-droid/socialshield-vn-2">GITHUB REPO ↗</a>
         </div>
       </div>
-      <div class="proj-strip">
-        <div class="metric-badges mono">
-          <span class="m-badge accent">100% Accuracy (v2)</span>
-          <span class="m-badge good">0% Safe OTP FPR</span>
-          <span class="m-badge">1.47ms p50 Latency</span>
-          <span class="m-badge">100% Verified Hotlines</span>
+
+      <div class="case-copy">
+        <div class="case-top-line">
+          <span class="big-idx serif">01</span>
+          <span class="case-kicker mono">FINTECH SECURITY · RISK ENGINE</span>
         </div>
-        <div class="stack-line mono">Python · FastAPI · Scikit-learn · BM25 · SQLite</div>
+        <h2 class="case-title">SocialShield-VN 2.0</h2>
+        <p class="case-lead">
+          Vietnamese anti-scam assistant detecting fake bank/e-wallet messages, spoofed links, no-URL job-task traps, and edited transfer bills—combining 22 domain fraud rules, domain allowlists, and verified Vietnam hotlines in a 5-view FastAPI app.
+        </p>
+        <div class="case-metrics">
+          <div class="cm-item">
+            <div class="cm-num mono">100%</div>
+            <div class="cm-lbl mono">Accuracy (28 unseen)</div>
+          </div>
+          <div class="cm-item">
+            <div class="cm-num mono">0.0%</div>
+            <div class="cm-lbl mono">Safe OTP False Positives</div>
+          </div>
+        </div>
+        <div class="case-stack mono">STACK: Python · FastAPI · Scikit-learn · BM25 · SQLite · 1.47ms p50</div>
       </div>
     </article>
 
-    <!-- PROJECT 02: IFRS-ESG Disclosure Intelligence -->
-    <article class="project-block">
-      <div class="proj-top">
-        <div class="proj-img-frame">
+    <!-- CASE 02 (Inverted: Editorial Left, Image Right — True Magazine Rhythm) -->
+    <article class="case-spread flip no-border" style="padding-top: 16px;">
+      <div class="case-copy">
+        <div class="case-top-line">
+          <span class="big-idx serif">02</span>
+          <span class="case-kicker mono">ICECH 2026 · PUBLISHED RESEARCH</span>
+        </div>
+        <h2 class="case-title">IFRS-ESG Intelligence</h2>
+        <p class="case-lead">
+          Structured compliance retrieval pipeline built for our published <strong>ICECH 2026</strong> HSBC case study. Extracts PDF disclosures, aligns passages to IFRS S1/S2 clauses via 4-way hybrid retrieval, and flags potential greenwashing contradictions.
+        </p>
+        <div class="case-metrics">
+          <div class="cm-item">
+            <div class="cm-num mono">ICECH ’26</div>
+            <div class="cm-lbl mono">Published Co-Author</div>
+          </div>
+          <div class="cm-item">
+            <div class="cm-num mono">S1 / S2</div>
+            <div class="cm-lbl mono">4-Way Hybrid Audit</div>
+          </div>
+        </div>
+        <div class="case-stack mono">STACK: Python · pdfplumber · BM25 · Sentence Transformers</div>
+      </div>
+
+      <div class="figure-wrap">
+        <div class="art-frame">
           <img src="assets/previews/ifrs-esg-cover.jpg" alt="IFRS-ESG Disclosure Intelligence" />
         </div>
-        <div>
-          <div class="proj-meta">
-            <span class="proj-num mono">PROJECT 02 · ICECH 2026 RESEARCH</span>
-            <a href="https://github.com/phonghoang5800-droid/IFRS-ESG-Disclosure-Intelligence" class="proj-link mono">GitHub Repo ↗</a>
-          </div>
-          <h2 class="proj-title">IFRS-ESG Disclosure Intelligence</h2>
-          <div class="proj-role">Published Co-Author (ICECH 2026) · Research &amp; Data Pipeline</div>
-          <div class="proj-points">
-            <div><strong>Problem:</strong> Manually auditing long corporate annual reports against IFRS S1/S2 climate and governance standards is slow and prone to missed disclosures.</div>
-            <div><strong>Solution:</strong> Built a structured Python extraction and 4-way retrieval pipeline (BM25 + dense semantic matching) mapping report passages directly to IFRS S1/S2 clauses and flagging unsupported claims.</div>
-            <div><strong>Outcome:</strong> Directly supported our accepted and published HSBC case study at the ICECH 2026 International Conference.</div>
-          </div>
+        <div class="art-cap mono">
+          <span>FIG 02.A — COMPLIANCE AUDIT VIEW</span>
+          <a href="https://github.com/phonghoang5800-droid/IFRS-ESG-Disclosure-Intelligence">GITHUB REPO ↗</a>
         </div>
-      </div>
-      <div class="proj-strip">
-        <div class="metric-badges mono">
-          <span class="m-badge accent">ICECH 2026 Published</span>
-          <span class="m-badge good">IFRS S1 / S2 Mapping</span>
-          <span class="m-badge">4-Way Hybrid Retrieval</span>
-        </div>
-        <div class="stack-line mono">Python · pdfplumber · BM25 · Sentence Transformers</div>
       </div>
     </article>
 
-    <!-- Compact Key Takeaways Box so Page 2 feels balanced and scannable -->
-    <div class="info-box" style="margin-top: 4px; background: var(--pearl);">
-      <h3 class="sec-label" style="margin-bottom: 6px;">Design Principles Across Both Systems</h3>
-      <div class="tracks-3" style="margin-bottom: 0;">
-        <div class="track-card" style="background:#fff;">
-          <div class="track-num mono">EVIDENCE FIRST</div>
-          <h4>Zero Black-Box Verdicts</h4>
-          <p>Every score links directly to highlighted phrases, official domains, or IFRS source clauses.</p>
-        </div>
-        <div class="track-card" style="background:#fff;">
-          <div class="track-num mono">REAL BENCHMARKS</div>
-          <h4>Automated Testing</h4>
-          <p>Both pipelines include reproducible evaluation scripts comparing baseline vs. upgraded accuracy.</p>
-        </div>
-        <div class="track-card" style="background:#fff;">
-          <div class="track-num mono">USER READY</div>
-          <h4>Built for Non-Tech Users</h4>
-          <p>Complex scoring logic is distilled into clear 1-click actions and readable risk cards.</p>
-        </div>
-      </div>
+    <div class="editorial-note">
+      <span class="en-tag mono">NOTE // 01</span>
+      <p class="en-quote serif">
+        “Every risk score or compliance flag is tied to concrete evidence—highlighted phrases, official domains, or IFRS source clauses—so business users can verify decisions in seconds.”
+      </p>
     </div>
 
-    <div class="page-footer mono">
-      <span>Nguyen Hoang Phong · Portfolio</span>
+    <div class="run-foot mono">
+      <span>NGUYEN HOANG PHONG · SELECTED WORKS</span>
       <span>02 / 04</span>
     </div>
   </section>
 
   <!-- ========================================================= -->
-  <!-- PAGE 3: HANOI HOMES & INTERBANK VERIFYCHAIN               -->
+  <!-- PAGE 3: SPREAD — CASE 03 & CASE 04                        -->
   <!-- ========================================================= -->
   <section class="page">
-    <div class="top-rule"></div>
-    <div class="page-header mono">
-      <span>DATA PRODUCTS &amp; FINTECH SYSTEMS</span>
-      <span>03 / 04</span>
+    <div class="run-head mono">
+      <span>CHAPTER II · DATA PRODUCTS &amp; BANKING SYSTEMS</span>
+      <span>CASES 03 — 04</span>
     </div>
 
-    <!-- PROJECT 03: Hanoi Homes -->
-    <article class="project-block">
-      <div class="proj-top">
-        <div class="proj-img-frame">
-          <img src="assets/previews/hanoi-homes-real.png" alt="Hanoi Homes Real Web App" />
+    <!-- CASE 03: Hanoi Homes -->
+    <article class="case-spread">
+      <div class="figure-wrap">
+        <div class="art-frame">
+          <img src="assets/previews/hanoi-homes-real.png" alt="Hanoi Homes Web Application" />
         </div>
-        <div>
-          <div class="proj-meta">
-            <span class="proj-num solar mono">PROJECT 03 · EXPLAINABLE ML</span>
-            <a href="https://github.com/phonghoang5800-droid/hanoi-home" class="proj-link mono">GitHub Repo ↗</a>
-          </div>
-          <h2 class="proj-title">Hanoi Homes — Explainable Apartment Pricing</h2>
-          <div class="proj-role">Data Pipeline, ML Modeling &amp; Web Application Developer</div>
-          <div class="proj-points">
-            <div><strong>Problem:</strong> Homebuyers in Hanoi struggle to verify whether listed apartment asking prices are fair due to noisy, duplicated, and unstructured listings.</div>
-            <div><strong>Solution:</strong> Cleaned and standardized 1,856 raw listings into 846 verified records across 262 projects, trained a CatBoost pricing model with SHAP explanations, and deployed an interactive search &amp; valuation web app.</div>
-            <div><strong>Outcome:</strong> Achieved 14.57% MAPE with transparent per-feature price breakdowns and passed 463/463 automated functional test cases.</div>
-          </div>
+        <div class="art-cap mono">
+          <span>FIG 03.A — HANOI HOMES LIVE WEB APP</span>
+          <a href="https://github.com/phonghoang5800-droid/hanoi-home">GITHUB REPO ↗</a>
         </div>
       </div>
-      <div class="proj-strip">
-        <div class="metric-badges mono">
-          <span class="m-badge accent">MAPE 14.57%</span>
-          <span class="m-badge good">463 / 463 Tests Passed</span>
-          <span class="m-badge">846 Clean Listings · 262 Projects</span>
+
+      <div class="case-copy">
+        <div class="case-top-line">
+          <span class="big-idx serif">03</span>
+          <span class="case-kicker mono">REAL ESTATE DATA · EXPLAINABLE ML</span>
         </div>
-        <div class="stack-line mono">Python · CatBoost · SHAP · R Shiny · SQLite</div>
+        <h2 class="case-title">Hanoi Homes Valuation</h2>
+        <p class="case-lead">
+          Apartment discovery and asking-price reference platform for Hanoi homebuyers. Cleaned 1,856 noisy raw listings into 846 verified records across 262 projects, powered by CatBoost + SHAP explanations and R Shiny.
+        </p>
+        <div class="case-metrics">
+          <div class="cm-item">
+            <div class="cm-num mono">14.57%</div>
+            <div class="cm-lbl mono">CatBoost MAPE</div>
+          </div>
+          <div class="cm-item">
+            <div class="cm-num mono">463/463</div>
+            <div class="cm-lbl mono">QA Test Cases Passed</div>
+          </div>
+        </div>
+        <div class="case-stack mono">STACK: Python · CatBoost · SHAP · R Shiny · SQLite</div>
       </div>
     </article>
 
-    <!-- PROJECT 04: InterBank VerifyChain -->
-    <article class="project-block">
-      <div class="proj-top">
-        <div class="proj-img-frame">
-          <img src="assets/images/interbank-ui.png" alt="InterBank VerifyChain Real Web App" />
+    <!-- CASE 04: InterBank VerifyChain (Inverted) -->
+    <article class="case-spread flip no-border" style="padding-top: 16px;">
+      <div class="case-copy">
+        <div class="case-top-line">
+          <span class="big-idx serif">04</span>
+          <span class="case-kicker mono">PAYMENTS SECURITY · LIVE SIMULATION</span>
         </div>
-        <div>
-          <div class="proj-meta">
-            <span class="proj-num mint mono">PROJECT 04 · LIVE FINTECH DEMO</span>
-            <a href="https://phonghoang5800-droid.github.io/InterBank-VerifyChain-Secure-Transaction-Simulation/" class="proj-link mono">Live Demo ↗</a>
+        <h2 class="case-title">InterBank VerifyChain</h2>
+        <p class="case-lead">
+          Browser-based interbank settlement simulator demonstrating Web Crypto OTP authentication, SHA-256 payload hashing, RSA digital signing, and tamper-evident reconciliation audit logs for customer and officer roles.
+        </p>
+        <div class="case-metrics">
+          <div class="cm-item">
+            <div class="cm-num mono">LIVE</div>
+            <div class="cm-lbl mono">Interactive Web Demo</div>
           </div>
-          <h2 class="proj-title">InterBank VerifyChain — Secure Settlement Sim</h2>
-          <div class="proj-role">FinTech Systems Designer, Frontend Builder &amp; QA Tester</div>
-          <div class="proj-points">
-            <div><strong>Problem:</strong> Demonstrating multi-bank authentication, cryptographic signing, and reconciliation audit trails clearly to business and banking stakeholders.</div>
-            <div><strong>Solution:</strong> Built an interactive browser simulation implementing Web Crypto OTP verification, SHA-256 payload hashing, RSA digital signatures, and a live tamper-evident settlement ledger.</div>
-            <div><strong>Outcome:</strong> Deployed live on GitHub Pages with 19 end-to-end QA test cases covering both customer transfers and reconciliation officers.</div>
+          <div class="cm-item">
+            <div class="cm-num mono">19 QA</div>
+            <div class="cm-lbl mono">End-to-End Test Cases</div>
           </div>
         </div>
+        <div class="case-stack mono">STACK: HTML5 · CSS3 · JavaScript · Web Crypto API (RSA/SHA-256)</div>
       </div>
-      <div class="proj-strip">
-        <div class="metric-badges mono">
-          <span class="m-badge good">Live Browser Demo</span>
-          <span class="m-badge accent">OTP · SHA-256 · RSA</span>
-          <span class="m-badge">19 QA Test Cases</span>
+
+      <div class="figure-wrap">
+        <div class="art-frame">
+          <img src="assets/images/interbank-ui.png" alt="InterBank VerifyChain Web App" />
         </div>
-        <div class="stack-line mono">HTML5 · CSS3 · JavaScript · Web Crypto API</div>
+        <div class="art-cap mono">
+          <span>FIG 04.A — LIVE INTERACTIVE DEMO</span>
+          <a href="https://phonghoang5800-droid.github.io/InterBank-VerifyChain-Secure-Transaction-Simulation/">OPEN DEMO ↗</a>
+        </div>
       </div>
     </article>
 
-    <!-- Compact Process & QA Highlights -->
-    <div class="info-box" style="margin-top: 4px; background: var(--pearl);">
-      <h3 class="sec-label" style="margin-bottom: 6px;">Execution Discipline (Data Quality &amp; Functional QA)</h3>
-      <div class="tracks-3" style="margin-bottom: 0;">
-        <div class="track-card" style="background:#fff;">
-          <div class="track-num mono">DATA HYGIENE</div>
-          <h4>Strict Cleaning Rules</h4>
-          <p>Deduplication, outlier handling, and schema validation before any model training or dashboarding.</p>
-        </div>
-        <div class="track-card" style="background:#fff;">
-          <div class="track-num mono">QA COVERAGE</div>
-          <h4>482+ Verified Cases</h4>
-          <p>Structured test checklists covering edge inputs, missing values, role permissions, and audit trails.</p>
-        </div>
-        <div class="track-card" style="background:#fff;">
-          <div class="track-num mono">BUSINESS FIT</div>
-          <h4>Transparent Assumptions</h4>
-          <p>Clear disclaimers separating listing prices and simulated ledgers from live bank settlements.</p>
-        </div>
-      </div>
+    <div class="editorial-note">
+      <span class="en-tag mono">NOTE // 02</span>
+      <p class="en-quote serif">
+        “Reliable data products start before modeling: strict deduplication, clear assumptions, and 480+ documented functional test cases ensure every interface holds up under edge inputs.”
+      </p>
     </div>
 
-    <div class="page-footer mono">
-      <span>Nguyen Hoang Phong · Portfolio</span>
+    <div class="run-foot mono">
+      <span>NGUYEN HOANG PHONG · SELECTED WORKS</span>
       <span>03 / 04</span>
     </div>
   </section>
 
   <!-- ========================================================= -->
-  <!-- PAGE 4: RIDELINK CHAIN, PROJECT MATRIX & CONTACT          -->
+  <!-- PAGE 4: CASE 05 + OBSIDIAN EDITORIAL BACK-COVER COLOPHON  -->
   <!-- ========================================================= -->
   <section class="page">
-    <div class="top-rule"></div>
-    <div class="page-header mono">
-      <span>BLOCKCHAIN SYSTEMS &amp; PORTFOLIO INDEX</span>
-      <span>04 / 04</span>
+    <div class="run-head mono">
+      <span>CHAPTER III · SMART ESCROW &amp; COLOPHON</span>
+      <span>CASE 05 &amp; INDEX</span>
     </div>
 
-    <!-- PROJECT 05: RideLink Chain -->
-    <article class="project-block">
-      <div class="proj-top">
-        <div class="proj-img-frame">
-          <img src="assets/previews/ridelink-real.png" alt="RideLink Chain Real Web UI" />
+    <!-- CASE 05: RideLink Chain -->
+    <article class="case-spread no-border">
+      <div class="figure-wrap">
+        <div class="art-frame">
+          <img src="assets/previews/ridelink-real.png" alt="RideLink Chain Web UI" />
         </div>
-        <div>
-          <div class="proj-meta">
-            <span class="proj-num mono">PROJECT 05 · SMART ESCROW</span>
-            <a href="https://github.com/phonghoang5800-droid/ridelink-chain" class="proj-link mono">GitHub Repo ↗</a>
-          </div>
-          <h2 class="proj-title">RideLink Chain — Smart Escrow Ride-Hailing</h2>
-          <div class="proj-role">Business &amp; System Analyst · Smart Contract Prototype</div>
-          <div class="proj-points">
-            <div><strong>Problem:</strong> Ride-sharing disputes over fare locking, driver payout timing, and split-ride transparency require verifiable rules.</div>
-            <div><strong>Solution:</strong> Defined end-to-end booking, distance pricing, and split-payment data specifications, backed by a Solidity 0.8.20 escrow contract, QR ride verification, and hash-linked admin ledger.</div>
-            <div><strong>Outcome:</strong> Delivered a complete multi-role demo (passenger, driver, admin) with MetaMask integration and resettable local Hardhat scripts.</div>
-          </div>
+        <div class="art-cap mono">
+          <span>FIG 05.A — RIDELINK CHAIN LIVE INTERFACE</span>
+          <a href="https://github.com/phonghoang5800-droid/ridelink-chain">GITHUB REPO ↗</a>
         </div>
       </div>
-      <div class="proj-strip">
-        <div class="metric-badges mono">
-          <span class="m-badge accent">Solidity 0.8.20 Escrow</span>
-          <span class="m-badge">QR Ride Verification</span>
-          <span class="m-badge good">Multi-Role Web App</span>
+
+      <div class="case-copy">
+        <div class="case-top-line">
+          <span class="big-idx serif">05</span>
+          <span class="case-kicker mono">BLOCKCHAIN SYSTEMS · SMART ESCROW</span>
         </div>
-        <div class="stack-line mono">Node.js · Express · Solidity · Hardhat · MetaMask</div>
+        <h2 class="case-title">RideLink Chain</h2>
+        <p class="case-lead">
+          Decentralized ride-hailing prototype specifying distance pricing, seat-sharing, and split-payment API fields—backed by a Solidity 0.8.20 smart escrow contract, QR ride verification, and hash-linked admin ledger.
+        </p>
+        <div class="case-metrics">
+          <div class="cm-item">
+            <div class="cm-num mono">0.8.20</div>
+            <div class="cm-lbl mono">Solidity Smart Escrow</div>
+          </div>
+          <div class="cm-item">
+            <div class="cm-num mono">3 ROLES</div>
+            <div class="cm-lbl mono">Rider · Driver · Admin</div>
+          </div>
+        </div>
+        <div class="case-stack mono">STACK: Node.js · Express · Solidity · Hardhat · MetaMask</div>
       </div>
     </article>
 
-    <!-- Fast-Scan Portfolio Summary Matrix -->
-    <h3 class="sec-label" style="margin-top: 6px;">Quick Project Index (3-Second Scan)</h3>
-    <table class="summary-table">
-      <thead>
-        <tr>
-          <th>Project</th>
-          <th>Domain</th>
-          <th>Key Tools</th>
-          <th>Verified Result</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>SocialShield-VN 2.0</strong></td>
-          <td>FinTech Risk</td>
-          <td class="mono">FastAPI, ML, BM25</td>
-          <td><strong>100% Acc</strong>, 0% OTP FPR, 1.47ms p50</td>
-        </tr>
-        <tr>
-          <td><strong>IFRS-ESG Intelligence</strong></td>
-          <td>ESG Research</td>
-          <td class="mono">Python, NLP, BM25</td>
-          <td><strong>ICECH 2026</strong> Published Co-Author</td>
-        </tr>
-        <tr>
-          <td><strong>Hanoi Homes</strong></td>
-          <td>Real Estate ML</td>
-          <td class="mono">CatBoost, SHAP, R</td>
-          <td><strong>14.57% MAPE</strong>, 463/463 tests passed</td>
-        </tr>
-        <tr>
-          <td><strong>InterBank VerifyChain</strong></td>
-          <td>Payments Security</td>
-          <td class="mono">Web Crypto, JS</td>
-          <td><strong>Live Demo</strong>, OTP/SHA-256/RSA, 19 QA</td>
-        </tr>
-        <tr>
-          <td><strong>RideLink Chain</strong></td>
-          <td>Web3 Mobility</td>
-          <td class="mono">Solidity, Node.js</td>
-          <td>Smart escrow, QR check &amp; audit ledger</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Executive Contact Banner -->
-    <div class="cta-box">
-      <div>
-        <div class="mono" style="font-size:9.5px;color:#93c5fd;letter-spacing:0.1em;margin-bottom:4px;">OPEN FOR INTERNSHIP &amp; TRAINEE ROLES · HANOI</div>
-        <h3>Let's connect and build practical products together.</h3>
-        <p>Available for FinTech, Business Analysis, and Data Analytics roles in Hanoi.</p>
+    <!-- Full-Bleed Obsidian Ink Editorial Back-Cover Colophon -->
+    <div class="back-colophon">
+      <div class="col-head">
+        <h2 class="col-title serif">Let’s build something <em>real.</em></h2>
+        <span class="mono" style="font-size:8.5px;letter-spacing:0.12em;color:#a8a29e;">SUMMARY LEDGER · 2026</span>
       </div>
-      <div class="cta-links mono">
-        <a href="mailto:phonghoang5800@gmail.com">phonghoang5800@gmail.com</a>
-        <a href="https://phonghoang5800-droid.github.io">phonghoang5800-droid.github.io</a>
-        <a href="https://github.com/phonghoang5800-droid">github.com/phonghoang5800-droid</a>
-        <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411">linkedin.com/in/hoàng-nguyễn-phong</a>
+
+      <table class="col-index">
+        <thead>
+          <tr>
+            <th class="mono">#</th>
+            <th>PROJECT</th>
+            <th>DOMAIN</th>
+            <th>STACK</th>
+            <th>VERIFIED OUTCOME</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono acc">01</td>
+            <td><strong>SocialShield-VN 2.0</strong></td>
+            <td>FinTech Risk</td>
+            <td class="mono">FastAPI · ML · BM25</td>
+            <td><strong>100% Acc</strong>, 0% OTP FPR, 1.47ms p50</td>
+          </tr>
+          <tr>
+            <td class="mono acc">02</td>
+            <td><strong>IFRS-ESG Intelligence</strong></td>
+            <td>ESG Research</td>
+            <td class="mono">Python · NLP · BM25</td>
+            <td><strong>ICECH 2026</strong> Published Co-Author</td>
+          </tr>
+          <tr>
+            <td class="mono acc">03</td>
+            <td><strong>Hanoi Homes</strong></td>
+            <td>Real Estate Data</td>
+            <td class="mono">CatBoost · SHAP · R</td>
+            <td><strong>14.57% MAPE</strong>, 463/463 QA passed</td>
+          </tr>
+          <tr>
+            <td class="mono acc">04</td>
+            <td><strong>InterBank VerifyChain</strong></td>
+            <td>Payments Sim</td>
+            <td class="mono">Web Crypto · JS</td>
+            <td><strong>Live Demo</strong>, OTP/SHA-256/RSA, 19 QA</td>
+          </tr>
+          <tr>
+            <td class="mono acc">05</td>
+            <td><strong>RideLink Chain</strong></td>
+            <td>Smart Escrow</td>
+            <td class="mono">Solidity · Node.js</td>
+            <td>Escrow contract, QR check &amp; audit ledger</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="col-contact">
+        <div class="col-links mono">
+          <a href="mailto:phonghoang5800@gmail.com">→ phonghoang5800@gmail.com</a>
+          <a href="https://phonghoang5800-droid.github.io">→ https://phonghoang5800-droid.github.io</a>
+          <a href="https://github.com/phonghoang5800-droid">→ https://github.com/phonghoang5800-droid</a>
+          <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411">→ LinkedIn / Nguyễn Hoàng Phong</a>
+        </div>
+        <div class="col-stamp mono">
+          AVAILABLE FOR INTERNSHIP / TRAINEE ROLES<br />
+          FINTECH · BUSINESS ANALYSIS · DATA<br />
+          HANOI, VIETNAM · 2026
+        </div>
       </div>
     </div>
 
-    <div class="page-footer mono">
-      <span>Nguyen Hoang Phong · Financial Technology &amp; Digital Business (VNU-IS)</span>
+    <div class="run-foot mono">
+      <span>NGUYEN HOANG PHONG · COLOPHON</span>
       <span>04 / 04</span>
     </div>
   </section>
