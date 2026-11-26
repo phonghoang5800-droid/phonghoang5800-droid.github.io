@@ -426,87 +426,45 @@
     }
 
     /* ===================================================== */
-    /* PAGE 4: OBSIDIAN INK BACK-COVER COLOPHON              */
+    /* PAGE 4: CLEAN ARCHIVAL CREAM CONTACT & COLOPHON       */
     /* ===================================================== */
-    .back-colophon {
-      margin-top: 10px;
-      background: var(--ink);
-      color: var(--paper);
-      padding: 18px 20px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      flex: 1;
+    .contact-editorial {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1.5px solid var(--rule-dark);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12mm;
+      align-items: start;
     }
 
-    .col-head {
+    .ce-title {
+      margin: 4px 0 8px;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1.02;
+      color: var(--ink);
+    }
+
+    .ce-title em { color: var(--vermilion); font-style: italic; }
+    .ce-note { margin: 0; font-size: 10.5px; color: var(--muted); line-height: 1.55; max-width: 78mm; }
+
+    .ce-ledger {
+      border-top: 1px solid var(--rule-dark);
+    }
+
+    .ce-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      border-bottom: 1px solid rgba(246, 243, 236, 0.22);
-      padding-bottom: 8px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 10px;
     }
 
-    .col-title {
-      margin: 0;
-      font-size: 34px;
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .col-title em { color: #ff6b4a; font-style: italic; }
-
-    .col-index {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 9.5px;
-    }
-
-    .col-index th, .col-index td {
-      padding: 6.5px 6px;
-      text-align: left;
-      border-bottom: 1px solid rgba(246, 243, 236, 0.15);
-    }
-
-    .col-index th {
-      font-size: 8px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #a8a29e;
-    }
-
-    .col-index td strong { color: #ffffff; }
-    .col-index td.acc { color: #ff6b4a; font-weight: 600; }
-
-    .col-contact {
-      margin-top: auto;
-      padding-top: 10px;
-      border-top: 1px solid rgba(246, 243, 236, 0.24);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 12px;
-    }
-
-    .col-links {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 9.5px;
-    }
-
-    .col-links a {
-      color: var(--paper);
-      text-decoration: none;
-    }
-
-    .col-stamp {
-      text-align: right;
-      font-size: 8.5px;
-      letter-spacing: 0.1em;
-      color: #a8a29e;
-      line-height: 1.5;
-    }
+    .ce-k { font-size: 8.5px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
+    .ce-v { color: var(--ink); text-decoration: none; font-weight: 600; }
+    .ce-v:hover { color: var(--vermilion); }
   </style>
 </head>
 <body>
@@ -863,73 +821,32 @@
       </div>
     </article>
 
-    <!-- Full-Bleed Obsidian Ink Editorial Back-Cover Colophon -->
-    <div class="back-colophon">
-      <div class="col-head">
-        <h2 class="col-title serif">Let’s build something <em>real.</em></h2>
-        <span class="mono" style="font-size:8.5px;letter-spacing:0.12em;color:#a8a29e;">SUMMARY LEDGER · 2026</span>
+    <!-- Clean Archival Cream Contact & Colophon (Zero Black Slab) -->
+    <div class="contact-editorial">
+      <div>
+        <div class="en-tag mono">CONTACT // HANOI, VIETNAM</div>
+        <h2 class="ce-title serif">Let’s connect<br />&amp; build <em>together.</em></h2>
+        <p class="ce-note">
+          Open to internship and trainee opportunities in FinTech, Business Analysis, and Data Analytics in Hanoi.
+        </p>
       </div>
 
-      <table class="col-index">
-        <thead>
-          <tr>
-            <th class="mono">#</th>
-            <th>PROJECT</th>
-            <th>DOMAIN</th>
-            <th>STACK</th>
-            <th>VERIFIED OUTCOME</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="mono acc">01</td>
-            <td><strong>SocialShield-VN 2.0</strong></td>
-            <td>FinTech Risk</td>
-            <td class="mono">FastAPI · ML · BM25</td>
-            <td><strong>100% Acc</strong>, 0% OTP FPR, 1.47ms p50</td>
-          </tr>
-          <tr>
-            <td class="mono acc">02</td>
-            <td><strong>IFRS-ESG Intelligence</strong></td>
-            <td>ESG Research</td>
-            <td class="mono">Python · NLP · BM25</td>
-            <td><strong>ICECH 2026</strong> Published Co-Author</td>
-          </tr>
-          <tr>
-            <td class="mono acc">03</td>
-            <td><strong>Hanoi Homes</strong></td>
-            <td>Real Estate Data</td>
-            <td class="mono">CatBoost · SHAP · R</td>
-            <td><strong>14.57% MAPE</strong>, 463/463 QA passed</td>
-          </tr>
-          <tr>
-            <td class="mono acc">04</td>
-            <td><strong>InterBank VerifyChain</strong></td>
-            <td>Payments Sim</td>
-            <td class="mono">Web Crypto · JS</td>
-            <td><strong>Live Demo</strong>, OTP/SHA-256/RSA, 19 QA</td>
-          </tr>
-          <tr>
-            <td class="mono acc">05</td>
-            <td><strong>RideLink Chain</strong></td>
-            <td>Smart Escrow</td>
-            <td class="mono">Solidity · Node.js</td>
-            <td>Escrow contract, QR check &amp; audit ledger</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="col-contact">
-        <div class="col-links mono">
-          <a href="mailto:phonghoang5800@gmail.com">→ phonghoang5800@gmail.com</a>
-          <a href="https://phonghoang5800-droid.github.io">→ https://phonghoang5800-droid.github.io</a>
-          <a href="https://github.com/phonghoang5800-droid">→ https://github.com/phonghoang5800-droid</a>
-          <a href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411">→ LinkedIn / Nguyễn Hoàng Phong</a>
+      <div class="ce-ledger">
+        <div class="ce-row">
+          <span class="ce-k mono">EMAIL</span>
+          <a class="ce-v mono" href="mailto:phonghoang5800@gmail.com">phonghoang5800@gmail.com</a>
         </div>
-        <div class="col-stamp mono">
-          AVAILABLE FOR INTERNSHIP / TRAINEE ROLES<br />
-          FINTECH · BUSINESS ANALYSIS · DATA<br />
-          HANOI, VIETNAM · 2026
+        <div class="ce-row">
+          <span class="ce-k mono">PORTFOLIO</span>
+          <a class="ce-v mono" href="https://phonghoang5800-droid.github.io">phonghoang5800-droid.github.io ↗</a>
+        </div>
+        <div class="ce-row">
+          <span class="ce-k mono">GITHUB</span>
+          <a class="ce-v mono" href="https://github.com/phonghoang5800-droid">github.com/phonghoang5800-droid ↗</a>
+        </div>
+        <div class="ce-row">
+          <span class="ce-k mono">LINKEDIN</span>
+          <a class="ce-v mono" href="https://www.linkedin.com/in/ho%C3%A0ng-nguy%E1%BB%85n-phong-247722411">Nguyễn Hoàng Phong ↗</a>
         </div>
       </div>
     </div>
